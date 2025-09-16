@@ -1,5 +1,6 @@
 import CommonLayout from "./layout/CommonLayout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Hero from "./pages/Hero";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
             path="/"
             element={
               <CommonLayout>
-                <h1>Hi</h1>
+                <Hero />
               </CommonLayout>
             }
           />
