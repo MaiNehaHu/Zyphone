@@ -52,9 +52,7 @@ const NavBar = () => {
 
     return (
         <>
-            {/* Top Nav */}
-            <div className="font-[Inter] bg-transparent py-4 sm:px-10 px-2 flex flex-row items-center justify-between">
-                {/* Logo */}
+            <div className="font-[Inter] bg-transparent py-4 sm:px-10 px-2 flex flex-row items-center justify-between sticky top-0 left-0 right-0 z-50">
                 <Link to="/">
                     <img
                         className="sm:w-16 w-14 sm:h-16 h-14"
@@ -64,7 +62,7 @@ const NavBar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="xl:flex hidden gap-0.5 bg-[#FFFFFF1C] rounded-full border-2 border-[#E5F0F336] px-4">
+                <div className="xl:flex hidden gap-0.5 bg-[#FFFFFF1C] backdrop-blur-md rounded-full border-2 border-[#E5F0F336] px-4">
                     {navItems.map((item, index) => (
                         <button
                             key={index}
@@ -82,10 +80,10 @@ const NavBar = () => {
 
                 {/* Desktop Actions */}
                 <div className="xl:flex hidden flex-row gap-2 items-center">
-                    <button className="px-6 py-3.5 cursor-pointer transition-colors rounded-full border-2 border-[#E5F0F336] bg-[#FFFFFF1C] text-[#02B1E6] hover:bg-[#02B1E6] hover:text-white">
+                    <button className="px-6 py-3.5 cursor-pointer transition-colors rounded-full border-2 border-[#E5F0F336] backdrop-blur-md bg-[#FFFFFF1C] text-[#02B1E6] hover:bg-gray-800">
                         WhatsApp
                     </button>
-                    <button className="px-6 py-3.5 cursor-pointer transition-colors rounded-full border-2 border-[#E5F0F336] bg-[#FFFFFF1C] text-[#02B1E6] hover:bg-[#02B1E6] hover:text-white">
+                    <button className="px-6 py-3.5 cursor-pointer transition-colors rounded-full border-2 border-[#E5F0F336] backdrop-blur-md bg-[#FFFFFF1C] text-[#02B1E6] hover:bg-gray-800">
                         <FiShoppingCart className="text-2xl" />
                     </button>
                 </div>
@@ -167,7 +165,7 @@ const BottomNav = () => {
                     <button
                         key={idx}
                         onClick={() => handleClick(item)}
-                        className={`flex flex-col items-center cursor-pointer py-2 flex-1 rounded-lg transition-colors
+                        className={`flex flex-col items-center cursor-pointer sm:py-3 py-2 flex-1 rounded-lg transition-colors
                             ${activeSection === item.targetId ||
                                 (item.label === "More" && openMore) ||
                                 (item.label === "Cart" && openCart)
