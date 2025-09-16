@@ -208,7 +208,7 @@ const BottomNav = () => {
 
 const Floater = ({ children }: { children: JSX.Element }) => {
     return (
-        <div className="fixed sm:bottom-22 bottom-20 left-1/2 -translate-x-1/2 sm:w-[95%] w-[97%] border border-white/30 max-w-md bg-black/70 backdrop-blur-xl rounded-2xl shadow-xl sm:p-4 p-3 grid grid-cols-2 gap-2 z-40">
+        <div className="fixed sm:bottom-22 bottom-18 left-1/2 -translate-x-1/2 sm:w-[95%] w-[97%] border border-white/30 max-w-md bg-black/70 backdrop-blur-xl rounded-2xl shadow-xl sm:p-4 p-3 grid grid-cols-2 gap-2 z-40">
             {children}
         </div>
     );
