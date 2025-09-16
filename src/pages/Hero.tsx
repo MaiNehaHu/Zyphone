@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <div
         id="home"
-        className="font-[Urbanist] text-white flex flex-col gap-8 items-center w-full lg:px-20 sm:px-10 p-4 xl:mt-16 mt-0 lg:pb-40 md:p-30 pb-10 z-0 relative"
+        className="font-[Urbanist] text-white flex flex-col gap-8 items-center w-full lg:px-20 sm:px-10 p-4 xl:mt-16 mt-0 lg:pb-40 md:pb-30 pb-10 z-0 relative"
       >
         <h1 className="md:max-w-2xl md:text-[64px] sm:text-5xl text-4xl text-center font-semibold leading-tight">
           Bengaluru's #1 Apple Device{" "}
