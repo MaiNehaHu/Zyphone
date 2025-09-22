@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 
 const CommonLayout = ({ children }: { children: JSX.Element }) => {
     return (
-        <div className='bg-white min-h-screen relative'>
+        <div className='min-h-screen relative'>
             <NavBar />
 
             {children}

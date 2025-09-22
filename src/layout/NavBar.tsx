@@ -1,16 +1,17 @@
-import { useEffect, useState, type JSX } from "react";
-import { FiHome, FiShoppingCart } from "react-icons/fi";
-import { LuLayoutGrid } from "react-icons/lu";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../logo.svg";
 
 interface NavItem {
     name: string;
-    targetId: string; // id of the section
+    targetId: string;
 }
 
 const NavBar = () => {
     const [activeSection, setActiveSection] = useState("home");
+    const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const navItems: NavItem[] = [
         { name: "Home", targetId: "home" },
@@ -27,42 +28,49 @@ const NavBar = () => {
     const handleScroll = (id: string) => {
         const section = document.getElementById(id);
         if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
+            const yOffset = -100; // offset from top
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+            setMenuOpen(false); // close menu after click
         }
     };
 
     useEffect(() => {
-        const sections = document.querySelectorAll("section[id]"); // every section with an id
+        const sections = document.querySelectorAll("section[id]");
 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id); // update active section
+                        setActiveSection(entry.target.id);
                     }
                 });
             },
-            { threshold: 0.6 } // trigger when 60% of the section is visible
+            { threshold: 0.6 }
         );
 
         sections.forEach((section) => observer.observe(section));
-
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        const onScroll = () => {
+            setScrolled(window.scrollY > 100);
+        };
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     return (
-        <div className="bg-black">
-            <div className="font-[Inter] bg-transparent py-4 sm:px-10 px-2 flex flex-row items-center justify-between sticky top-0 left-0 right-0 z-50">
+        <div className={`sticky top-0 z-50 transition-colors ${scrolled ? "bg-transparent" : "bg-black"}`}>
+            <div className="font-[Inter] py-4 sm:px-10 px-4 flex flex-row items-center justify-between">
+                {/* Logo */}
                 <Link to="/">
-                    <img
-                        className="sm:w-16 w-14 sm:h-16 h-14"
-                        src={logo}
-                        alt="Logo"
-                    />
+                    <img className="sm:w-16 w-14 sm:h-16 h-14" src={logo} alt="Logo" />
                 </Link>
 
-                {/* Desktop Menu */}
-                <div className="xl:flex hidden gap-0.5 bg-[#FFFFFF1C] backdrop-blur-md rounded-full border-2 border-[#E5F0F336] px-4">
+                {/* Desktop Nav */}
+                <div className="hidden lg:flex gap-0.5 bg-[#00000020] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4">
                     {navItems.map((item, index) => (
                         <button
                             key={index}
@@ -70,146 +78,50 @@ const NavBar = () => {
                             className={`p-4 cursor-pointer rounded-full transition-colors duration-200
                                 ${activeSection === item.targetId
                                     ? "text-[#02B1E6] font-semibold"
-                                    : "text-white hover:text-[#02B1E6]"}
-                            `}
+                                    : "text-white hover:text-[#02B1E6]"}`}
                         >
                             {item.name}
                         </button>
                     ))}
                 </div>
 
-                {/* Desktop Actions */}
-                <div className="xl:flex hidden flex-row gap-2 items-center">
-                    <button className="px-6 py-3.5 cursor-pointer transition-colors rounded-full border-2 border-[#E5F0F336] backdrop-blur-md bg-[#FFFFFF1C] text-[#02B1E6] hover:bg-gray-800">
-                        WhatsApp
-                    </button>
-                    <button className="px-6 py-3.5 cursor-pointer transition-colors rounded-full border-2 border-[#E5F0F336] backdrop-blur-md bg-[#FFFFFF1C] text-[#02B1E6] hover:bg-gray-800">
-                        <FiShoppingCart className="text-2xl" />
-                    </button>
-                </div>
+                <div className="lg:block hidden"></div>
+
+                {/* Hamburger for mobile */}
+                <button
+                    className="lg:hidden text-white text-2xl bg-[#00000020] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4 py-2.5 cursor-pointer"
+                    onClick={() => setMenuOpen((prev) => !prev)}
+                >
+                    {menuOpen ? <FiX /> : <FiMenu />}
+                </button>
             </div>
 
-            {/* Mobile Bottom Nav */}
-            <BottomNav />
-        </div>
-    );
-};
-
-const BottomNav = () => {
-    const [openMore, setOpenMore] = useState(false);
-    const [openCart, setOpenCart] = useState(false);
-    const [activeSection, setActiveSection] = useState("home");
-
-
-    const navItems = [
-        { label: "Home", icon: <FiHome className="text-lg" />, targetId: "home" },
-        { label: "More", icon: <LuLayoutGrid className="text-lg" />, targetId: "more" },
-        { label: "Cart", icon: <FiShoppingCart className="text-lg" />, targetId: "cart" },
-    ];
-
-    const moreItems = [
-        { name: "Services", targetId: "services" },
-        { name: "Partners", targetId: "partners" },
-        { name: "Process", targetId: "process" },
-        { name: "Why Us", targetId: "why-us" },
-        { name: "Reviews", targetId: "reviews" },
-        { name: "FAQ", targetId: "faq" },
-        { name: "About", targetId: "about" },
-        { name: "Contact", targetId: "contact" },
-    ];
-
-    const handleScroll = (id: string) => {
-        const section = document.getElementById(id);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
-        setOpenMore(false);
-        setOpenCart(false);
-    };
-
-    function handleClick(item: { targetId: string; label: string }) {
-        if (item.label === "More") {
-            setOpenMore((p) => !p);
-            setOpenCart(false);
-        } else if (item.label === "Cart") {
-            setOpenCart((p) => !p);
-            setOpenMore(false);
-        } else {
-            handleScroll(item.targetId);
-        }
-    }
-
-    useEffect(() => {
-        const sections = document.querySelectorAll("section[id]"); // every section with an id
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id); // update active section
-                    }
-                });
-            },
-            { threshold: 0.6 } // trigger when 60% of the section is visible
-        );
-
-        sections.forEach((section) => observer.observe(section));
-
-        return () => observer.disconnect();
-    }, []);
-
-    return (
-        <div className="font-[Inter] xl:hidden flex items-center justify-center w-full fixed sm:bottom-2 bottom-1 left-0 right-0 z-30 sm:px-0 px-1">
-            <div className="bg-black/70 border border-gray-600 text-white flex flex-row justify-between rounded-full w-full max-w-md sm:py-2 py-1 px-4 backdrop-blur-lg shadow-lg">
-                {navItems.map((item, idx) => (
+            {/* Mobile Full-Screen Dropdown */}
+            {menuOpen && (
+                <div className="fixed inset-0 h-fit bg-black backdrop-blur-lg flex flex-wrap gap-2 flex-row items-start sm:px-8 px-4 pt-16 sm:pb-10 pb-6 space-y-6 z-50 rounded-b-3xl shadow-2xl shadow-gray-900 border border-t-0 border-gray-700">
+                    {/* Close Button (top-right) */}
                     <button
-                        key={idx}
-                        onClick={() => handleClick(item)}
-                        className={`flex flex-col items-center cursor-pointer sm:py-3 py-2 flex-1 rounded-lg transition-colors
-                            ${activeSection === item.targetId ||
-                                (item.label === "More" && openMore) ||
-                                (item.label === "Cart" && openCart)
-                                ? "text-[#02B1E6]"
-                                : "text-gray-400"}
-                        `}
+                        className="absolute top-6 right-6 text-white text-3xl cursor-pointer hover:text-blue-500"
+                        onClick={() => setMenuOpen(false)}
                     >
-                        {item.icon}
-                        <span className="text-xs">{item.label}</span>
+                        <FiX />
                     </button>
-                ))}
-            </div>
 
-            {/* Floating More Menu */}
-            {openMore && (
-                <Floater>
-                    <>
-                        {moreItems.map((item, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => handleScroll(item.targetId)}
-                                className="cursor-pointer text-left px-3 sm:py-3 py-2 rounded-lg border transition text-sm text-white hover:text-[#02B1E6] border-white/20 bg-black/10 hover:bg-black/40"
-                            >
-                                {item.name}
-                            </button>
-                        ))}
-                    </>
-                </Floater>
+                    {/* Nav Items */}
+                    {navItems.map((item, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => handleScroll(item.targetId)}
+                            className={`text-left sm:text-base text-sm font-medium transition-colors bg-[#00000020] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4 sm:py-2.5 py-2 mb-0 cursor-pointer
+                                ${activeSection === item.targetId
+                                    ? "text-[#02B1E6]"
+                                    : "text-white hover:text-[#02B1E6]"}`}
+                        >
+                            {item.name}
+                        </button>
+                    ))}
+                </div>
             )}
-
-            {/* Floating Cart */}
-            {openCart && (
-                <Floater>
-                    <p className="text-white text-sm">Your cart is empty.</p>
-                </Floater>
-            )}
-        </div>
-    );
-};
-
-const Floater = ({ children }: { children: JSX.Element }) => {
-    return (
-        <div className="fixed sm:bottom-22 bottom-18 left-1/2 -translate-x-1/2 sm:w-[95%] w-[97%] border border-white/30 max-w-md bg-black/70 backdrop-blur-xl rounded-2xl shadow-xl sm:p-4 p-3 grid grid-cols-2 gap-2 z-40">
-            {children}
         </div>
     );
 };

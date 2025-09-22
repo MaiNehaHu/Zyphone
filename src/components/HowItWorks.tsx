@@ -4,9 +4,9 @@ import FAQ from './FAQ';
 
 const HowItWorks = () => {
     return (
-        <div id="process" className="font-[Urbanist] lg:px-20 sm:px-10 px-4 sm:mb-16 mb-8 h-full">
-            <div className="bg-[#EEEEEE] sm:rounded-4xl rounded-2xl lg:flex flex-row items-start gap-8 h-full">
-                <div className='lg:w-1/2 w-full sm:p-10 p-6 flex flex-col gap-4 h-full justify-between items-start'>
+        <div id="process" className="font-[Urbanist] lg:px-20 sm:px-10 px-4 sm:mb-16 mb-8">
+            <div className="bg-[#EEEEEE] sm:rounded-4xl rounded-2xl lg:flex flex-row gap-8">
+                <div className='lg:w-1/2 w-full sm:p-10 p-6 flex flex-col gap-4 justify-between items-start'>
                     <div>
                         <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl font-bold">
                             How It Works?
@@ -18,7 +18,7 @@ const HowItWorks = () => {
 
                     <FAQ />
 
-                    <button className="group mt-auto flex items-center justify-center gap-2 sm:px-6 px-4 sm:py-3 py-2 rounded-full cursor-pointer bg-gradient-to-r from-[#01C3D9] to-[#062899] text-white font-medium hover:opacity-90 transition">
+                    <button className="group mt-auto flex w-fit items-center justify-center gap-2 sm:px-6 px-4 sm:py-3 py-2 rounded-full cursor-pointer bg-gradient-to-r from-[#01C3D9] to-[#062899] text-white font-medium hover:opacity-90 transition">
                         Book Service Now
                         <FiArrowUpRight className="sm:text-lg text-sm transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </button>
