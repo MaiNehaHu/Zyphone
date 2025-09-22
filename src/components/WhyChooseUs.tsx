@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
                     {reasons.map((reas) => {
                         const { reason, subtitle, icon } = reas;
                         return (
-                            <div className="flex-1 space-y-1 xl:min-w-auto lg:min-w-[300px] sm:min-w-[200px] min-w-[180px]">
+                            <div className="flex-1 space-y-1 xl:min-w-auto lg:min-w-[300px] md:min-w-[260px] min-w-[180px]">
                                 {icon}
 
                                 <h3 className='sm:text-2xl text-lg text-white sm:whitespace-normal whitespace-nowrap'>{reason}</h3>

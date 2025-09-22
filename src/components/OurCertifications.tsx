@@ -4,7 +4,7 @@ import { MdElectricBolt } from "react-icons/md";
 
 const OurCertifications = () => {
     return (
-        <div id="partners" className="font-[Urbanist] lg:px-20 sm:px-10 px-4 sm:mb-16 mb-8">
+        <div className="font-[Urbanist] lg:px-20 sm:px-10 px-4 sm:mb-16 mb-8">
             <div className="bg-[#1B1B1B] sm:p-8 p-6 sm:rounded-4xl rounded-2xl flex flex-col items-center gap-8">
                 <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent text-center font-bold leading-tight">
                     Our Certifications & Achievements

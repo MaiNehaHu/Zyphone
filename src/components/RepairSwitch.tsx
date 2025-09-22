@@ -49,7 +49,7 @@ const RepairSwitch = () => {
                                         <div className='sm:text-sm text-xs bg-gradient-to-r from-[#01C3D9] to-[#062899] p-[1px] w-fit rounded-full'>
                                             <button className="group bg-[#1B1B1B] flex items-center gap-2 px-3 py-1.5 rounded-full cursor-pointer text-white font-medium transition">
                                                 Book Now - ₹{price}
-                                                <FiArrowUpRight className="text-lg transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                                <FiArrowUpRight className="sm:text-lg text-sm transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                             </button>
                                         </div>
                                     </div>

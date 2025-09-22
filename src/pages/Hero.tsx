@@ -7,6 +7,7 @@ import RepairServices from "../components/RepairServices"
 import WhyChooseUs from "../components/WhyChooseUs"
 import TruestedBy from "../components/TruestedBy"
 import OurCertifications from "../components/OurCertifications"
+import HowItWorks from "../components/HowItWorks"
 // import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
@@ -30,13 +31,13 @@ const Hero = () => {
         <div className="flex sm:flex-row flex-col flex-wrap gap-4 text-sm">
           <button className="group flex items-center gap-2 px-6 py-3 rounded-full cursor-pointer bg-[#1E1E1E] text-white font-medium hover:bg-[#2b2b2b] transition">
             Book Repair Now – Same Day Service
-            <FiArrowUpRight className="text-lg transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <FiArrowUpRight className="sm:text-lg text-sm transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
 
           <button className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#01C3D9] to-[#062899] text-white font-medium hover:opacity-90 transition">
             <BsChatDots className="text-lg" />
             Get FREE Quote
-            <FiArrowUpRight className="text-lg transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <FiArrowUpRight className="sm:text-lg text-sm transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
         </div>
 
@@ -90,6 +91,8 @@ const Hero = () => {
       <WhyChooseUs />
 
       <TruestedBy />
+
+      <HowItWorks />
 
       <OurCertifications />
     </>
