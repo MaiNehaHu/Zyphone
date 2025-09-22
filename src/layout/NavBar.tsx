@@ -27,6 +27,8 @@ const NavBar = () => {
 
     const handleScroll = (id: string) => {
         const section = document.getElementById(id);
+        setActiveSection(id);
+
         if (section) {
             const yOffset = -100; // offset from top
             const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -70,7 +72,7 @@ const NavBar = () => {
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden lg:flex gap-0.5 bg-[#00000020] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4">
+                <div className="hidden lg:flex gap-0.5 bg-[#00000050] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4">
                     {navItems.map((item, index) => (
                         <button
                             key={index}
