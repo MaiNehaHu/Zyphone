@@ -8,6 +8,7 @@ import WhyChooseUs from "../components/WhyChooseUs"
 import TruestedBy from "../components/TruestedBy"
 import OurCertifications from "../components/OurCertifications"
 import HowItWorks from "../components/HowItWorks"
+import WhyZyphone from "../components/WhyZyphone"
 // import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
@@ -93,6 +94,8 @@ const Hero = () => {
       <TruestedBy />
 
       <HowItWorks />
+
+      <WhyZyphone />
 
       <OurCertifications />
     </>
