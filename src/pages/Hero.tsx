@@ -3,14 +3,18 @@ import { BsChatDots } from "react-icons/bs"
 import { FiArrowUpRight } from "react-icons/fi"
 import { TiStarFullOutline } from "react-icons/ti"
 import Gradient from '../assets/gradient.svg'
-import Phones from '../assets/iphones.svg'
+import RepairServices from "../components/RepairServices"
+import WhyChooseUs from "../components/WhyChooseUs"
+import TruestedBy from "../components/TruestedBy"
+import OurCertifications from "../components/OurCertifications"
+// import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
   return (
     <>
       <div
         id="home"
-        className="font-[Urbanist] text-white flex flex-col gap-8 items-center w-full lg:px-20 sm:px-10 p-4 xl:mt-16 mt-0 md:pb-22 pb-10 z-0 relative"
+        className="font-[Urbanist] text-white bg-black flex flex-col gap-8 items-center w-full lg:px-20 sm:px-10 px-4 xl:pt-16 pt-0 md:pb-22 pb-10 z-0 relative"
       >
         <h1 className="md:max-w-2xl md:text-[64px] sm:text-5xl text-4xl text-center font-semibold leading-tight">
           Bengaluru's #1 Apple Device{" "}
@@ -76,10 +80,18 @@ const Hero = () => {
           <img src={Phones} className="w-full h-full object-cover" />
         </div> */}
 
-        <div className="backdrop-blur-sm w-full -z-50 absolute bottom-0 lg:translate-y-40 md:translate-y-28 sm:translate-y-26 translate-y-1/2 lg:h-[70%] md:h-[55%] sm:h-[45%] h-[20%]">
+        <div className="backdrop-blur-sm w-full -z-50 absolute bottom-0 lg:translate-y-40 md:translate-y-28 translate-y-20 lg:h-[70%] md:h-[55%] h-[40%]">
           <img src={Gradient} className="w-full h-full sm:object-fill object-cover" />
         </div>
       </div>
+
+      <RepairServices />
+
+      <WhyChooseUs />
+
+      <TruestedBy />
+
+      <OurCertifications />
     </>
   )
 }

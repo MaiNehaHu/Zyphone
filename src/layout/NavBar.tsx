@@ -51,7 +51,7 @@ const NavBar = () => {
     }, []);
 
     return (
-        <>
+        <div className="bg-black">
             <div className="font-[Inter] bg-transparent py-4 sm:px-10 px-2 flex flex-row items-center justify-between sticky top-0 left-0 right-0 z-50">
                 <Link to="/">
                     <img
@@ -91,7 +91,7 @@ const NavBar = () => {
 
             {/* Mobile Bottom Nav */}
             <BottomNav />
-        </>
+        </div>
     );
 };
 
