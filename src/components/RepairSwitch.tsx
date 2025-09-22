@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
-import ScreenReplace from '../assets/screenReplace';
+import ScreenReplace from '../assets/ScreenReplace';
 
 const buttons = {
     iphoneRepair: "iPhone Repair",
