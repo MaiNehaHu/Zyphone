@@ -91,7 +91,7 @@ const NavBar = () => {
 
                 {/* Hamburger for mobile */}
                 <button
-                    className="lg:hidden text-white text-2xl bg-[#000000] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4 py-2.5 cursor-pointer"
+                    className="lg:hidden text-white sm:text-2xl bg-[#000000] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4 py-2.5 cursor-pointer"
                     onClick={() => setMenuOpen((prev) => !prev)}
                 >
                     {menuOpen ? <FiX /> : <FiMenu />}

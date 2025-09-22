@@ -16,7 +16,7 @@ const Hero = () => {
     <>
       <div
         id="home"
-        className="font-[Urbanist] text-white bg-black flex flex-col gap-8 items-center w-full lg:px-20 sm:px-10 px-4 xl:pt-16 pt-0 md:pb-22 pb-10 z-0 relative"
+        className="font-[Urbanist] text-white bg-black flex flex-col gap-8 items-center w-full lg:px-20 sm:px-10 px-4 xl:pt-16 md:pt-8 md:pb-0 pb-0 z-0 relative"
       >
         <h1 className="md:max-w-2xl md:text-[64px] sm:text-5xl text-4xl text-center font-semibold leading-tight">
           Bengaluru's #1 Apple Device{" "}
@@ -82,8 +82,8 @@ const Hero = () => {
           <img src={Phones} className="w-full h-full object-cover" />
         </div> */}
 
-        <div className="backdrop-blur-sm w-full -z-50 absolute bottom-0 lg:translate-y-40 md:translate-y-28 translate-y-20 lg:h-[70%] md:h-[55%] h-[40%]">
-          <img src={Gradient} className="w-full h-full sm:object-fill object-cover" />
+        <div className="backdrop-blur-sm w-full -z-50 absolute bottom-0 translate-y-1/3 lg:h-[50%] md:h-[40%] h-[20%]">
+          <img src={Gradient} className="w-full h-full sm:object-fill object-fill" />
         </div>
       </div>
 
