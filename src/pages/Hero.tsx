@@ -9,6 +9,9 @@ import TruestedBy from "../components/TruestedBy"
 import OurCertifications from "../components/OurCertifications"
 import HowItWorks from "../components/HowItWorks"
 import WhyZyphone from "../components/WhyZyphone"
+import ImagesCollection from "../components/ImagesCollection"
+import About from "../components/About"
+import FAQ from "../components/FAQ"
 // import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
@@ -82,8 +85,8 @@ const Hero = () => {
           <img src={Phones} className="w-full h-full object-cover" />
         </div> */}
 
-        <div className="backdrop-blur-sm w-full -z-50 absolute bottom-0 translate-y-1/3 lg:h-[50%] md:h-[40%] h-[20%]">
-          <img src={Gradient} className="w-full h-full sm:object-fill object-fill" />
+        <div className="backdrop-blur-sm w-full -z-50 absolute bottom-0 translate-y-1/4 lg:h-[50%] md:h-[40%] h-[20%]">
+          <img src={Gradient} className="w-full h-full sm:object-fill object-fill pointer-events-none" />
         </div>
       </div>
 
@@ -97,7 +100,13 @@ const Hero = () => {
 
       <WhyZyphone />
 
+      <ImagesCollection />
+
       <OurCertifications />
+
+      <About />
+
+      <FAQ />
     </>
   )
 }

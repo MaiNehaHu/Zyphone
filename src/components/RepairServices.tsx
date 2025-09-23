@@ -4,7 +4,7 @@ import { BsCheckLg } from "react-icons/bs";
 
 const RepairServices = () => {
   return (
-    <div id="services" className="font-[Urbanist] text-black bg-white lg:mt-30 md:mt-20 mt-12 sm:mb-16 mb-8 lg:px-20 sm:px-10 px-4 flex flex-col items-center gap-6">
+    <div id="services" className="font-[Urbanist] text-black bg-white lg:mt-26 md:mt-20 mt-12 sm:mb-16 mb-8 lg:px-20 sm:px-10 px-4 flex flex-col items-center gap-6">
       <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl text-center font-bold leading-tight">
         Apple Device Repair Services in {" "}
         <span className="bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">

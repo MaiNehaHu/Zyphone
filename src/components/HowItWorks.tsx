@@ -1,6 +1,6 @@
 import { FiArrowUpRight } from 'react-icons/fi';
 import SideImg from '../assets/how-it-works.svg';
-import FAQ from './FAQ';
+import FAQ from './QandA';
 
 const HowItWorks = () => {
     return (
@@ -24,7 +24,7 @@ const HowItWorks = () => {
                     </button>
                 </div>
 
-                <img src={SideImg} className='lg:w-1/2 w-full lg:h-fit sm:h-96 h-60 mt-auto px-8 object-fill' />
+                <img src={SideImg} className='lg:w-1/2 w-full lg:h-fit sm:h-96 h-60 mt-auto px-8 object-fill pointer-events-none' />
             </div>
         </div>
     )
