@@ -11,7 +11,7 @@ const HowItWorks = () => {
                         <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl font-bold">
                             How It Works?
                         </h2>
-                        <p className="md:max-w-3xl w-full md:text-base text-start text-sm text-gray-600">
+                        <p className="mt-2 md:max-w-3xl w-full md:text-base text-start text-sm text-gray-600">
                             Simple 4-step process to get your Apple device repaired
                         </p>
                     </div>

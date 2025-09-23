@@ -8,7 +8,7 @@ const About = () => {
                 <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl text-center font-bold text-[#02B1E6]">
                     About Zyphone
                 </h2>
-                <p className="md:max-w-3xl w-full md:text-base text-center text-sm text-gray-300">
+                <p className="mt-2 md:max-w-3xl w-full md:text-base text-center text-sm text-gray-300">
                     Bangalore's most trusted Apple device repair service since 2018
                 </p>
             </div>
@@ -49,7 +49,7 @@ const About = () => {
                 </div>
             </div>
 
-            <img src={Gradient} className='fixed bottom-0 w-full object-cover pointer-events-none' />
+            <img src={Gradient} className='absolute bottom-0 w-full h-fit object-fill pointer-events-none' />
         </div>
     )
 }
