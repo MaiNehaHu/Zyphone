@@ -12,6 +12,7 @@ import WhyZyphone from "../components/WhyZyphone"
 import ImagesCollection from "../components/ImagesCollection"
 import About from "../components/About"
 import FAQ from "../components/FAQ"
+import Footer from "../layout/Footer"
 // import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
@@ -107,6 +108,8 @@ const Hero = () => {
       <About />
 
       <FAQ />
+
+      <Footer />
     </>
   )
 }
