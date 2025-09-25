@@ -41,7 +41,7 @@ const questionAndAnswer = [
     {
         id: 1,
         "question": "How long does a typical repair take?",
-        "answer": "Most repairs are completed within 1 to 3 business days depending on the complexity and availability of parts."
+        "answer": "Most repairs are completed within 2 - 4 hours depending on the complexity and availability of parts."
     },
     {
         id: 21,

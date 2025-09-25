@@ -13,6 +13,7 @@ import ImagesCollection from "../components/ImagesCollection"
 import About from "../components/About"
 import FAQ from "../components/FAQ"
 import Footer from "../layout/Footer"
+import Review from "../components/Review"
 // import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
@@ -106,6 +107,8 @@ const Hero = () => {
       <OurCertifications />
 
       <About />
+
+      <Review />
 
       <FAQ />
 
