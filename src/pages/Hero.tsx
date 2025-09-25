@@ -14,6 +14,7 @@ import About from "../components/About"
 import FAQ from "../components/FAQ"
 import Footer from "../layout/Footer"
 import Review from "../components/Review"
+import MeetOurTeam from "../components/MeetOurTeam"
 // import Phones from '../assets/iphones.svg'
 
 const Hero = () => {
@@ -107,6 +108,8 @@ const Hero = () => {
       <OurCertifications />
 
       <About />
+
+      <MeetOurTeam />
 
       <Review />
 
