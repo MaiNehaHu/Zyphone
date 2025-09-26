@@ -56,7 +56,7 @@ const Review = () => {
 
                             <div className="my-6 bg-gradient-to-r from-white to-[#1B1B1B] to-98% h-[1px]" />
 
-                            <div className="flex items-center justify-between">
+                            <div className="flex items-center justify-between gap-1">
                                 <div className="flex items-center gap-3">
                                     <img
                                         src={review.reviewer.avatar}
