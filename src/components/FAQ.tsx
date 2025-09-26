@@ -3,7 +3,7 @@ import FAQ_QandA from "./FAQ_QandA";
 
 const FAQ = () => {
   return (
-    <div className="font-[Urbanist] sm:space-y-8 space-y-4 lg:px-16 sm:px-10 px-4 lg:py-16 sm:py-10 py-6 flex flex-col items-center bg-[#EEEEEE]">
+    <div id="faq" className="font-[Urbanist] sm:space-y-8 space-y-4 lg:px-16 sm:px-10 px-4 lg:py-16 sm:py-10 py-6 flex flex-col items-center bg-[#EEEEEE]">
       <div>
         <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl font-bold">
           Frequently Asked Questions

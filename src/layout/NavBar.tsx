@@ -17,11 +17,11 @@ const NavBar = () => {
         { name: "Home", targetId: "home" },
         { name: "Services", targetId: "services" },
         { name: "Partners", targetId: "partners" },
-        { name: "Process", targetId: "process" },
         { name: "Why Us", targetId: "why-us" },
+        { name: "Process", targetId: "process" },
+        { name: "About", targetId: "about" },
         { name: "Reviews", targetId: "reviews" },
         { name: "FAQ", targetId: "faq" },
-        { name: "About", targetId: "about" },
         { name: "Contact", targetId: "contact" },
     ];
 

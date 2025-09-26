@@ -3,7 +3,7 @@ import Gradient from '../assets/about-gradient.svg'
 
 const About = () => {
     return (
-        <div className="font-[Urbanist] bg-[#1B1B1B] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0">
+        <div id="about" className="font-[Urbanist] bg-[#1B1B1B] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0">
             <div>
                 <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl text-center font-bold text-[#02B1E6]">
                     About Zyphone

@@ -8,7 +8,7 @@ const RequestServiceForm = () => {
     const [deviceType, setDeviceType] = useState("");
 
     return (
-        <div className='bg-white font-[Urbanist] lg:px-16 sm:px-10 px-4 lg:py-16 sm:py-10 py-6 flex md:flex-row flex-col gap-6 lg:w-[85%] w-full mx-auto'>
+        <div id="contact" className='bg-white font-[Urbanist] lg:px-16 sm:px-10 px-4 lg:py-16 sm:py-10 py-6 flex md:flex-row flex-col gap-6 lg:w-[85%] w-full mx-auto'>
             <div className="bg-[#EEEEEE] sm:p-4 p-3 rounded-xl lg:w-2/3 md:w-3/5 w-full space-y-3 flex flex-col">
                 <p className="sm:text-lg text-base font-semibold bg-gradient-to-b from-[#01C3D9] to-[#062899] bg-clip-text text-transparent">Request Service</p>
 
