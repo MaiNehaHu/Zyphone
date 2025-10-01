@@ -1,12 +1,12 @@
 import { FiArrowUpRight } from "react-icons/fi"
 
-const WhyZyphone = () => {
+const Whyzyphon = () => {
     return (
         <div className="font-[Urbanist] flex flex-col items-center gap-6 sm:p-8 p-4 sm:mb-10 mb-6">
             <h1 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl text-center font-bold leading-tight">
                 Why Choose{" "}
                 <span className="bg-gradient-to-r from-[#01C3D9] to-[#062899] bg-clip-text text-transparent">
-                    Zyphone
+                    zyphon
                 </span>
                 {" "}for Apple Repair?
             </h1>
@@ -23,4 +23,4 @@ const WhyZyphone = () => {
     )
 }
 
-export default WhyZyphone
+export default Whyzyphon

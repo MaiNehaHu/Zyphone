@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div id="about" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0 rounded-2xl my-6">
             <h2 className="font-['Space_Grotesk'] text-5xl font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">
-                About Zyphone
+                About zyphon
             </h2>
 
             <div className="flex md:flex-row flex-col items-center gap-10 xl:px-16">

@@ -94,7 +94,7 @@ const Hero = () => {
 
       <TruestedBy />
 
-      <WhyZyphone />
+      <Whyzyphon />
 
       <ImagesCollection />
 
