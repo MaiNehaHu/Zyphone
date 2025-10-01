@@ -6,31 +6,33 @@ const FAQ_QandA = () => {
 
     return (
         <div
-            className='max-w-3xl w-full flex flex-col sm:gap-4 gap-2'
+            className='flex-3/4 w-full flex flex-col sm:gap-4 gap-2'
         >
             {questionAndAnswer.map((qna) => (
-                <div
-                    key={qna.id}
-                    className={`${opened === qna.id ? "border-[#062899]" : "border-[#f2f2f2]"}` + " md:p-8 sm:p-5 p-3 border-2 bg-white sm:rounded-2xl rounded-xl w-full"}
-                >
-                    <div className="flex items-center justify-between">
-                        <h3 className={`${opened === qna.id ? "bg-gradient-to-r from-[#01C3D9] to-[#062899] bg-clip-text text-transparent" : "text-black"} sm:text-base text-sm`}>
-                            {qna.question}
-                        </h3>
+                <div className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02]" : "bg-gray-700"}` + ' p-[1px] rounded-2xl'}>
+                    <div
+                        key={qna.id}
+                        className={"md:p-8 sm:p-5 p-3 bg-[#0F0F0F] text-white sm:rounded-2xl rounded-xl w-full"}
+                    >
+                        <div className="flex items-center justify-between">
+                            <h3 className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#F1D507] bg-clip-text text-transparent" : "text-white"} sm:text-base text-sm`}>
+                                {qna.question}
+                            </h3>
 
-                        <button
-                            onClick={() => setOpened(qna.id)}
-                        >
-                            <FaCaretDown className={`${opened === qna.id ? "text-[#062899] rotate-180 transition duration-100" : "text-gray-500"} cursor-pointer hover:text-[#062899]`} />
-                        </button>
+                            <button
+                                onClick={() => setOpened(qna.id)}
+                            >
+                                <FaCaretDown className={`${opened === qna.id ? "text-[#DA4A02] rotate-180 transition duration-100" : "text-gray-500"} cursor-pointer hover:text-[#E60283]`} />
+                            </button>
+                        </div>
+
+                        {qna.id === opened
+                            &&
+                            <p className='text-gray-500 sm:text-base text-sm sm:mt-4 mt-2 leading-relaxed'>
+                                {qna.answer}
+                            </p>
+                        }
                     </div>
-
-                    {qna.id === opened
-                        &&
-                        <p className='text-gray-500 sm:text-base text-sm sm:mt-4 mt-2 leading-relaxed'>
-                            {qna.answer}
-                        </p>
-                    }
                 </div>
             ))}
         </div>

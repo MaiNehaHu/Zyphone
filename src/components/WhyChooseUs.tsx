@@ -1,59 +1,47 @@
-import { FaShieldAlt, FaTruck } from "react-icons/fa";
-import { IoCheckbox } from "react-icons/io5";
-import { MdElectricBolt } from "react-icons/md";
+import { IoCallOutline } from "react-icons/io5"
+import XPaddinText from "./XPaddinText"
+import { GoDotFill } from "react-icons/go"
 
 const WhyChooseUs = () => {
     return (
-        <div id="why-us" className="font-[Urbanist] lg:px-20 sm:px-10 px-4 sm:mb-16 mb-8">
-            <div className="bg-[#E6F3F2] sm:px-8 px-4 sm:py-16 py-8 sm:rounded-4xl rounded-2xl flex flex-col items-center gap-6">
-                <h2 className="md:max-w-4xl md:text-[42px] sm:text-4xl text-3xl text-center font-bold leading-tight">
-                    Why Choose Our iPhone Repair Service?
-                </h2>
+        <div className="bg-[#1F1F1F] text-white p-4 rounded-2xl flex flex-row items-center gap-10 relative">
+            <div className="w-2/5 bg-white rounded-2xl h-[550px]"></div>
 
-                <p className="md:max-w-3xl w-full md:text-base text-center text-sm text-gray-600">
-                    Expert Apple device repair services with genuine parts, certified technicians, and same-day service. We fix iPhones, MacBooks, iPads, and Apple Watches across Bangalore with 12-month warranty.
+            <div className="w-3/5 flex flex-col gap-10 justify-center py-10 max-w-xl mx-auto">
+                <div className="flex flex-col gap-6 items-start">
+                    <XPaddinText>why choose us</XPaddinText>
+
+                    <h2 className="font-['Space_Grotesk'] text-5xl font-medium">
+                        Top Reasons to Choose Our Gadget Repair
+                    </h2>
+                </div>
+
+                <p className="sm:text-base text-sm font-[Manrope]">
+                    We’re passionate about keeping your gadgets in top shape. Our team of experienced technicians combine technical expertise with exceptional customer service.
                 </p>
 
-                <div className="flex flex-row flex-wrap md:gap-6 gap-4 bg-[#1B1B1B] w-full sm:p-8 p-6 rounded-2xl">
-                    {reasons.map((reas) => {
-                        const { reason, subtitle, icon } = reas;
-                        return (
-                            <div className="flex-1 space-y-1 xl:min-w-auto lg:min-w-[300px] md:min-w-[260px] min-w-[180px]">
-                                {icon}
+                <div className="grid grid-cols-2 gap-4 font-[Manrope]">
+                    {["Same-day Service", "Genuine Parts", "12-Month Warrenty", "Transparent Pricing", "Free Doorstep Pickup & Delivery"].map((tag) => (
+                        <p className="flex flex-row items-center gap-2">
+                            <GoDotFill className="text-2xl" />
+                            {tag}
+                        </p>
+                    ))}
+                </div>
 
-                                <h3 className='sm:text-2xl text-lg text-white sm:whitespace-normal whitespace-nowrap'>{reason}</h3>
+                <div className="flex flex-row gap-3 font-[Manrope]">
+                    <button className="cursor-pointer hover:bg-white p-3 rounded-full bg-[#EF644C] text-white hover:text-[#EF744C] transition">
+                        <IoCallOutline className="text-xl" />
+                    </button>
 
-                                <p className="sm:text-sm text-xs text-gray-300 sm:whitespace-normal whitespace-nowrap">{subtitle}</p>
-                            </div>
-                        )
-                    })}
+                    <div className="text-sm flex flex-col gap-0.5 justify-center">
+                        <p className="text-[#D9D9D9]">Need any help?</p>
+                        <p className="text-white">+91 - 8970081700</p>
+                    </div>
                 </div>
             </div>
         </div>
     )
-};
-
-const reasons = [
-    {
-        icon: <MdElectricBolt className="text-yellow-500 md:text-5xl sm:text-4xl text-2xl mb-2" />,
-        reason: "Same Day Service",
-        subtitle: "Most reapirs in 2-4 hours"
-    },
-    {
-        icon: <IoCheckbox className="text-emerald-500 md:text-5xl sm:text-4xl text-2xl mb-2" />,
-        reason: "Genuine Parts",
-        subtitle: "Only authentic Apple components"
-    },
-    {
-        icon: <FaShieldAlt className="text-[#e9ecf0] md:text-5xl sm:text-4xl text-2xl mb-2" />,
-        reason: "12-Month Warrenty",
-        subtitle: "Comprehensive repair warranty"
-    },
-    {
-        icon: <FaTruck className="text-yellow-500 md:text-5xl sm:text-4xl text-2xl mb-2" />,
-        reason: "Free Doorstep",
-        subtitle: "Pickup & delivery in Bangalore"
-    },
-]
+}
 
 export default WhyChooseUs

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Gradient from '../assets/about-gradient.svg'
+// import Gradient from '../assets/about-gradient.svg'
 import Stars from './Stars';
 import Check from '../assets/Check';
 import ReviewDesign from '../assets/ReviewDesign';
@@ -29,10 +29,10 @@ const Review = () => {
     }, []);
 
     return (
-        <div id="reviews" className="font-[Urbanist] bg-[#1B1B1B] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col sm:gap-20 gap-10 items-center relative z-0">
+        <div id="reviews" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col sm:gap-20 gap-10 items-center relative z-0">
             <div>
-                <h2 className="md:max-w-7xl md:text-[42px] sm:text-4xl text-3xl text-center font-bold text-white">
-                    Customer Reviews - Apple Device Repair in Bangalore
+                <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-center text-white">
+                    Customer Reviews
                 </h2>
                 <p className="mt-2 md:max-w-7xl w-full md:text-base text-center text-sm text-gray-300">
                     Over 3000+ satisfied Apple device customers in Bangalore trust Zyphon for iPhone, iPad, MacBook repairs
@@ -46,7 +46,7 @@ const Review = () => {
                     .map((review) => (
                         <div
                             key={review.id}
-                            className="flex-1 sm:basis-[45%] basis-full md:p-6 p-4 rounded-2xl bg-[#1B1B1B] border border-gray-700 relative"
+                            className="w-full max-w-lg sm:basis-[45%] basis-full md:p-6 p-4 rounded-2xl bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] border border-gray-700 relative"
                         >
                             <Stars rating={review.rating} />
 
@@ -100,10 +100,10 @@ const Review = () => {
                 ))}
             </div>
 
-            <img
+            {/* <img
                 src={Gradient}
                 className="absolute bottom-0 w-full h-fit object-fill pointer-events-none -z-10"
-            />
+            /> */}
         </div>
     );
 };
@@ -141,6 +141,54 @@ const reviewsList = [
         reviewer: {
             name: 'Alice Brown',
             email: 'alice.brown@example.com',
+            avatar: "https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg"
+        },
+        verified: true,
+    },
+    {
+        id: 4,
+        rating: 5,
+        reviewText:
+            'Quick pickup and fast repair for my iPhone screen. Customer service was top-notch!',
+        reviewer: {
+            name: 'Rahul Kumar',
+            email: 'rahul.k@example.com',
+            avatar: "https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg"
+        },
+        verified: true,
+    },
+    {
+        id: 4,
+        rating: 5,
+        reviewText:
+            'Quick pickup and fast repair for my iPhone screen. Customer service was top-notch!',
+        reviewer: {
+            name: 'Rahul Kumar',
+            email: 'rahul.k@example.com',
+            avatar: "https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg"
+        },
+        verified: true,
+    },
+    {
+        id: 4,
+        rating: 5,
+        reviewText:
+            'Quick pickup and fast repair for my iPhone screen. Customer service was top-notch!',
+        reviewer: {
+            name: 'Rahul Kumar',
+            email: 'rahul.k@example.com',
+            avatar: "https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg"
+        },
+        verified: true,
+    },
+    {
+        id: 4,
+        rating: 5,
+        reviewText:
+            'Quick pickup and fast repair for my iPhone screen. Customer service was top-notch!',
+        reviewer: {
+            name: 'Rahul Kumar',
+            email: 'rahul.k@example.com',
             avatar: "https://images.pexels.com/photos/14653174/pexels-photo-14653174.jpeg"
         },
         verified: true,

@@ -1,63 +1,64 @@
-import { FiArrowUpRight } from "react-icons/fi"
+import type { JSX } from "react";
 
 const MeetOurTeam = () => {
     return (
-        <div className="font-[Urbanist] sm:mb-10 mb-6">
-            <div className="sm:p-8 p-4">
-                <div className="flex flex-row justify-between gap-3 items-start">
-                    <h2 className="md:text-[42px] sm:text-4xl text-3xl text-start font-bold">
-                        Meet Our Expert Team
-                    </h2>
+        <div className="bg-black text-white flex flex-col items-center gap-20 p-10 mx-auto my-10">
+            <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-center">
+                Meet Our Expert Team
+            </h2>
 
-                    <button className="group text-nowrap dm:flex hidden w-fit items-center justify-center gap-2 sm:px-6 px-4 sm:py-3 py-2 rounded-full cursor-pointer bg-gradient-to-r from-[#01C3D9] to-[#062899] text-white font-medium hover:opacity-90 transition">
-                        Book Service Now
-                        <FiArrowUpRight className="sm:text-lg text-sm transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </button>
-                </div>
 
-                <p className="mt-2 w-full md:text-base text-start text-sm text-gray-500">
-                    Apple-certified technicians with years of experience
-                </p>
-            </div>
+            <div className="flex flex-row w-full gap-10">
+                {teamList.slice(0, 4).map((team) => (
+                    <Gradientbg>
+                        <div className="px-6 py-12 flex flex-col items-center gap-3 bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] rounded-2xl">
+                            <img src={team.image} alt="Image" className="w-52 h-52 rounded-full object-cover" />
 
-            <div className="bg-[#E6F3F2] sm:p-6 p-4 flex sm:flex-row flex-col gap-4">
-                {people.map((peo) => {
-                    const { name, designation, department, image } = peo;
-                    return (
-                        <div className="sm:p-4 p-2 rounded-2xl flex-1 bg-white">
-                            <img src={image} className="w-full lg:h-[400px] md:h-[300px] sm:h-[250px] h-[300px] rounded-2xl object-cover object-top" />
-
-                            <div className="lg:p-10 p-6 lg:pb-6 pb-3">
-                                <p className="sm:text-base text-xs bg-gradient-to-b from-[#01C3D9] to-[#062899] bg-clip-text text-transparent">{designation}</p>
-                                <p className="text-2xl font-semibold">{name}</p>
-                                <p className="sm:text-base text-xs text-gray-400">{department}</p>
-                            </div>
+                            <p className="text-base">{team.name}</p>
+                            <p className="text-sm">{team.role}</p>
                         </div>
-                    )
-                })}
+                    </Gradientbg>
+                ))}
             </div>
         </div>
     )
 };
 
-const people = [
+const Gradientbg = ({ children }: { children: JSX.Element }) => {
+    return (
+        <div
+            className='p-[1px] bg-[linear-gradient(135deg,_#00000000_0%,_#757575_20%,_#00000000_60%,_#00000000_100%)] rounded-2xl flex-1'
+        >
+            {children}
+        </div>
+    )
+};
+
+const teamList = [
     {
-        name: "Priya Reddy",
-        designation: "Senior Technician",
-        department: "IPhone & iPad Repairs",
-        image: "https://i.pinimg.com/236x/da/fd/f2/dafdf25168edcb2f0e1d8702797946cc.jpg"
+        image: "https://wallpapers.com/images/featured/cute-profile-picture-s52z1uggme5sj92d.jpg",
+        name: "Nayaz Ahmed",
+        role: "CEO & Founder"
     },
     {
-        name: "Priya Reddy",
-        designation: "Senior Technician",
-        department: "IPhone & iPad Repairs",
-        image: "https://i.pinimg.com/236x/da/fd/f2/dafdf25168edcb2f0e1d8702797946cc.jpg"
+        image: "https://wallpapers.com/images/featured/cute-profile-picture-s52z1uggme5sj92d.jpg",
+        name: "Nayaz Ahmed",
+        role: "CEO & Founder"
     },
     {
-        name: "Priya Reddy",
-        designation: "Senior Technician",
-        department: "IPhone & iPad Repairs",
-        image: "https://i.pinimg.com/236x/da/fd/f2/dafdf25168edcb2f0e1d8702797946cc.jpg"
+        image: "https://wallpapers.com/images/featured/cute-profile-picture-s52z1uggme5sj92d.jpg",
+        name: "Nayaz Ahmed",
+        role: "CEO & Founder"
+    },
+    {
+        image: "https://wallpapers.com/images/featured/cute-profile-picture-s52z1uggme5sj92d.jpg",
+        name: "Nayaz Ahmed",
+        role: "CEO & Founder"
+    },
+    {
+        image: "https://wallpapers.com/images/featured/cute-profile-picture-s52z1uggme5sj92d.jpg",
+        name: "Nayaz Ahmed",
+        role: "CEO & Founder"
     },
 ]
 

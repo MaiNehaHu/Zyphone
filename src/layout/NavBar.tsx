@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../logo.svg";
+import { IoCallOutline } from "react-icons/io5";
 
 interface NavItem {
     name: string;
@@ -10,19 +11,18 @@ interface NavItem {
 
 const NavBar = () => {
     const [activeSection, setActiveSection] = useState("home");
-    const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navItems: NavItem[] = [
         { name: "Home", targetId: "home" },
         { name: "Services", targetId: "services" },
-        { name: "Partners", targetId: "partners" },
-        { name: "Why Us", targetId: "why-us" },
+        // { name: "Partners", targetId: "partners" },
+        // { name: "Why Us", targetId: "why-us" },
         { name: "Process", targetId: "process" },
-        { name: "About", targetId: "about" },
-        { name: "Reviews", targetId: "reviews" },
+        { name: "About Us", targetId: "about" },
+        // { name: "Reviews", targetId: "reviews" },
         { name: "FAQ", targetId: "faq" },
-        { name: "Contact", targetId: "contact" },
+        { name: "Contact Us", targetId: "contact" },
     ];
 
     const handleScroll = (id: string) => {
@@ -56,38 +56,69 @@ const NavBar = () => {
     }, []);
 
     useEffect(() => {
-        const onScroll = () => {
-            setScrolled(window.scrollY > 100);
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + 150; // offset for navbar height
+            let current = "home";
+
+            navItems.forEach((item) => {
+                const section = document.getElementById(item.targetId);
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = item.targetId;
+                    }
+                }
+            });
+
+            setActiveSection(current);
         };
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // run on mount to set default
+
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <div className={`sticky top-0 z-50 transition-colors ${scrolled ? "bg-transparent" : "bg-black"}`}>
-            <div className="font-[Inter] py-4 sm:px-10 px-4 flex flex-row items-center justify-between">
+        <div className={`top-0 z-50 transition-colors sticky p-4 w-full`}>
+            <div className="font-[Manrope] p-4 flex flex-row items-center justify-between border border-[#5E5B5B] bg-black rounded-2xl w-full">
                 {/* Logo */}
                 <Link to="/">
-                    <img className="sm:w-16 w-14 sm:h-16 h-14" src={logo} alt="Logo" />
+                    <img className="sm:w-full w-14 sm:h-12 h-10" src={logo} alt="Logo" />
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden lg:flex gap-0.5 bg-[#00000050] backdrop-blur-lg rounded-full border-2 border-[#E5F0F336] px-4">
+                <div className="hidden xl:flex gap-1 text-base">
                     {navItems.map((item, index) => (
                         <button
                             key={index}
                             onClick={() => handleScroll(item.targetId)}
-                            className={`p-4 cursor-pointer rounded-full transition-colors duration-200
+                            className={`cursor-pointer transition-colors duration-200 text-white border rounded-lg px-6 py-1.5
                                 ${activeSection === item.targetId
-                                    ? "text-[#02B1E6] font-semibold"
-                                    : "text-white hover:text-[#02B1E6]"}`}
+                                    ? "border-white"
+                                    : "border-black hover:border-white"}`}
                         >
                             {item.name}
                         </button>
                     ))}
                 </div>
 
-                <div className="lg:block hidden"></div>
+                <div className="xl:flex gap-6 hidden">
+                    <div className="flex flex-row gap-3">
+                        <button className="cursor-pointer hover:bg-white p-3 rounded-full bg-black text-white hover:text-black border border-white transition">
+                            <IoCallOutline className="text-xl" />
+                        </button>
+                        <div className="text-sm flex flex-col gap-0.5 justify-center">
+                            <p className="text-[#D9D9D9]">Ask Questions?</p>
+                            <p className="text-white">+91 - 8970081700</p>
+                        </div>
+                    </div>
+
+                    <button className="text-black bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] rounded-xl font-semibold px-8 py-3 text-sm">
+                        Get A Quote
+                    </button>
+                </div>
 
                 {/* Hamburger for mobile */}
                 <button
