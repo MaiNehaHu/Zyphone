@@ -50,11 +50,11 @@ const Review = () => {
               opacity = 1;
               zIndex = 30;
             } else if (idx === prevIndex) {
-              x = -250; // shift left
+              x = -300; // shift left
               opacity = 0.7;
               zIndex = 20;
             } else if (idx === nextIndex) {
-              x = 250; // shift right
+              x = 300; // shift right
               opacity = 0.7;
               zIndex = 20;
             }

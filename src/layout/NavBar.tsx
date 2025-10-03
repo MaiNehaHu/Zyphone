@@ -85,7 +85,7 @@ const NavBar = () => {
             <div className="font-[Manrope] p-4 flex flex-row items-center justify-between border border-[#5E5B5B] bg-black rounded-2xl w-full">
                 {/* Logo */}
                 <Link to="/">
-                    <img className="sm:w-full w-14 sm:h-12 h-10" src={logo} alt="Logo" />
+                    <img className="sm:w-full w-20 sm:h-12 h-10" src={logo} alt="Logo" />
                 </Link>
 
                 {/* Desktop Nav */}
