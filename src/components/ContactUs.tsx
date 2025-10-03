@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi"
 import { LuClock4 } from "react-icons/lu"
 import { useState, type JSX } from "react"
 import { SlLocationPin } from "react-icons/sl"
-import Gradient from '../assets/gradient-image.png'
+// import Gradient from '../assets/gradient-image.png'
 
 const ContactUs = () => {
     const [fullName, setFullName] = useState("");
@@ -19,7 +19,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div id="reviews" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] text-white from-40% t-[#3030350A] rounded-2xl lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col items-center sm:gap-20 gap-10 relative z-0 mb-16">
+        <div id="contact" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] text-white from-40% t-[#3030350A] rounded-2xl lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col items-center sm:gap-20 gap-10 relative z-0 mb-16">
             <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-white">
                 Contact Us
             </h2>
@@ -116,10 +116,10 @@ const ContactUs = () => {
             </div>
 
 
-            <img
+            {/* <img
                 src={Gradient}
                 className='absolute -bottom-82 w-full h-full object-contain pointer-events-none -z-0'
-            />
+            /> */}
         </div>
     )
 };

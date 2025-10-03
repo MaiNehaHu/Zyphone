@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Gradient from '../assets/gradient-image.png'
+// import Gradient from '../assets/gradient-image.png'
 import Stars from './Stars';
 import Check from '../assets/Check';
 import ReviewDesign from '../assets/ReviewDesign';
@@ -83,10 +83,10 @@ const Review = () => {
                 ))}
             </div>
 
-            <img
+            {/* <img
                 src={Gradient}
                 className='absolute -bottom-72 w-full h-full object-contain pointer-events-none -z-0'
-            />
+            /> */}
         </div>
     );
 };

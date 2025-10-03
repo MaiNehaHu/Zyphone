@@ -1,5 +1,5 @@
 import ImgBg from '../assets/imgbg.svg'
-import Gradient from '../assets/gradient-image.png'
+// import Gradient from '../assets/gradient-image.png'
 import type { JSX } from 'react';
 
 const About = () => {
@@ -47,10 +47,10 @@ const About = () => {
                 </div>
             </div>
 
-            <img
+            {/* <img
                 src={Gradient}
                 className='absolute -bottom-72 w-full h-full object-contain pointer-events-none -z-0'
-            />
+            /> */}
         </div>
     )
 };
