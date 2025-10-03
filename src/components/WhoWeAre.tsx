@@ -5,39 +5,48 @@ import { IoGiftOutline } from "react-icons/io5";
 
 const RepairServices = () => {
   return (
-    <div className='px-40 -translate-y-0 text-white bg-black flex flex-col gap-20 mb-20'>
+    <div className='font-[Manrope] xl:px-40 sm:px-10 px-5 text-white bg-black flex flex-col md:gap-20 gap-10 mb-20 lg:-translate-y-0 -translate-y-10'>
       <div className="mx-auto">
-        <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-center">Apple Device Repair Services in {" "}
+        <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-center">Apple Device Repair Services in {" "}
           <span className='bg-gradient-to-r from-[#E60283] to-[#F1D507] bg-clip-text text-transparent'>
             Bangaluru
           </span>
         </h2>
 
-        <p className='w-full max-w-3xl text-center mt-4'>
+        <p className='w-full text-center mt-4 sm:text-base text-sm'>
           Expert Apple device repair services with genuine parts, certified technicians, and same-day service. We fix iPhones, MacBooks, iPads, and Apple Watches across Bangalore with 12-month warranty.
         </p>
       </div>
 
-      <div className="flex flex-row items-end gap-10">
-        <section className="space-y-6 w-1/2">
-          <XPaddinText>
-            who we are
-          </XPaddinText>
-          <h2 className="font-['Space_Grotesk'] text-5xl font-medium">
+      <section className="lg:hidden flex space-y-2 w-full flex-col items-center">
+        <XPaddinText>
+          who we are
+        </XPaddinText>
+        <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-center">
+          Your trusted partner for gadget repairs
+        </h2>
+        <p className='w-full max-w-3xl mt-4 text-center sm:text-base text-sm'>
+          We’re passionate about keeping your gadgets in top shape. Our team of experienced technicians.
+        </p>
+      </section>
+
+      <div className="flex md:flex-row flex-col lg:items-end items-center gap-10">
+        <section className="space-y-6 md:w-1/2 w-full">
+          <h2 className="lg:block hidden font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium">
             Your trusted partner for gadget repairs
           </h2>
-          <p className='w-full max-w-3xl mt-4'>
+          <p className='lg:block hidden w-full max-w-3xl mt-4'>
             We’re passionate about keeping your gadgets in top shape. Our team of experienced technicians.
           </p>
 
-          <div className="grid grid-cols-2 gap-10 mt-16">
+          <div className="grid grid-cols-2 lg:gap-10 gap-4 lg:mt-16">
             {repairData.map((data) => (
               <GridSquare key={data.heading} icon={data.icon} heading={data.heading} desc={data.desc} />
             ))}
           </div>
         </section>
 
-        <section className="w-1/2 h-fit object-contain">
+        <section className="md:w-1/2 w-full h-fit object-contain">
           <svg viewBox="0 0 663 674" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M176 163.241C192.569 163.241 206 149.81 206 133.241V121C206 104.431 219.431 91 236 91H633C649.569 91 663 104.431 663 121V644C663 660.569 649.569 674 633 674H30C13.4315 674 0 660.569 0 644V193.241C0 176.673 13.4315 163.241 30 163.241H176Z" fill="#EF644C" floodOpacity="0.8" className="mix-blend-mode:hue" />
             <path d="M176 163.241C192.569 163.241 206 149.81 206 133.241V121C206 104.431 219.431 91 236 91H633C649.569 91 663 104.431 663 121V644C663 660.569 649.569 674 633 674H30C13.4315 674 0 660.569 0 644V193.241C0 176.673 13.4315 163.241 30 163.241H176Z" fill="#161616" floodOpacity="0.05" />
@@ -59,22 +68,22 @@ const RepairServices = () => {
 
 const repairData = [
   {
-    icon: <BsGear className="text-4xl" />,
+    icon: <BsGear className="sm:text-4xl text-2xl" />,
     heading: "Diagnosis & Repair",
     desc: "Commercial real estate: where opportunity meets brick and mortar in the world of business."
   },
   {
-    icon: <BsCheck2Square className="text-4xl" />,
+    icon: <BsCheck2Square className="sm:text-4xl text-2xl" />,
     heading: "Strict Quality Check",
     desc: "Commercial real estate: where opportunity meets brick and mortar in the world of business."
   },
   {
-    icon: <BsHandThumbsUp className="text-4xl" />,
+    icon: <BsHandThumbsUp className="sm:text-4xl text-2xl" />,
     heading: "Cash On Delivery",
     desc: "Commercial real estate: where opportunity meets brick and mortar in the world of business."
   },
   {
-    icon: <IoGiftOutline className="text-4xl" />,
+    icon: <IoGiftOutline className="sm:text-4xl text-2xl" />,
     heading: "Free Home Repair",
     desc: "Commercial real estate: where opportunity meets brick and mortar in the world of business."
   },
@@ -83,7 +92,7 @@ const repairData = [
 const GridSquare = ({ icon, heading, desc }: { icon: JSX.Element; heading: string; desc: string }) => {
 
   return (
-    <div className="w-full space-y-3">
+    <div className="w-full sm:space-y-3 space-y-2 sm:text-base text-sm">
       {icon}
       <p className="text-[#EF644C] font-medium">
         {heading}

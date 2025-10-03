@@ -9,7 +9,7 @@ const ActionGradientButton = ({ text, icon }: { text: string; icon: JSX.Element 
                 </div>
             </div>
 
-            <div className="bg-gradient-to-b from-[#F1D507] to-[#DA4A02] rounded-[10px] p-4 text-xl absolute right-0">
+            <div className="bg-gradient-to-b from-[#F1D507] to-[#DA4A02] rounded-[10px] lg:p-4.5 p-4 text-xl absolute right-0">
                 {icon}
             </div>
         </div>
