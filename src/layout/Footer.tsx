@@ -8,7 +8,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 
 const Footer = () => {
     return (
-        <div className="font-[Urbanist] bg-[#131313] text-white rounded-2xl my-10">
+        <div className="font-[Urbanist] bg-[#131313] text-white rounded-2xl mt-10">
             <div className='w-[80%] mx-auto flex flex-row'>
                 <div className="flex-1 flex flex-row items-center gap-10 border-r border-b border-[#3c3c3c] px-10 py-20">
                     <div className="flex-1 space-y-3">
@@ -105,7 +105,11 @@ const Footer = () => {
             <div className="w-full relative flex items-center justify-center">
                 <div className="bg-[#3c3c3c] to-98% h-[0.5px] w-[80%] mx-auto" />
 
-                <button className='bg-[#EF644C] p-3 rounded-xl absolute cursor-pointer hover:bg-[#EF645C] transition'>
+                <button
+                    onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className='bg-[#EF644C] p-3 rounded-xl absolute cursor-pointer hover:bg-[#EF645C] transition'>
                     <LiaArrowUpSolid className='text-xl' />
                 </button>
             </div>
@@ -119,7 +123,7 @@ const Footer = () => {
                     Terms & Conditions |  Privacy Policy
                 </p>
             </div>
-        </div>
+        </div >
     )
 };
 
