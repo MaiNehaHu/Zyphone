@@ -1,5 +1,5 @@
 import { IoCallOutline } from "react-icons/io5"
-import XPaddinText from "./XPaddinText"
+import XPaddinText from "./XPaddingText"
 import { GoDotFill } from "react-icons/go"
 
 const WhyChooseUs = () => {

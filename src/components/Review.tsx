@@ -1,35 +1,18 @@
-import { useEffect, useState } from 'react'
-// import Gradient from '../assets/about-gradient.svg'
+import { useState } from 'react'
+import Gradient from '../assets/gradient-image.png'
 import Stars from './Stars';
 import Check from '../assets/Check';
 import ReviewDesign from '../assets/ReviewDesign';
 
 const Review = () => {
     const [active, setActive] = useState(0);
-    const [cardsPerPage, setCardsPerPage] = useState(2);
 
     const handleDotClick = (index: number) => {
         setActive(index);
     };
 
-    // ✅ Update cards per page on resize
-    useEffect(() => {
-        const updateCardsPerPage = () => {
-            if (window.innerWidth < 640) {
-                setCardsPerPage(1);
-            } else {
-                setCardsPerPage(2);
-            }
-        };
-
-        updateCardsPerPage(); // run on mount
-        window.addEventListener("resize", updateCardsPerPage);
-
-        return () => window.removeEventListener("resize", updateCardsPerPage);
-    }, []);
-
     return (
-        <div id="reviews" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col sm:gap-20 gap-10 items-center relative z-0">
+        <div id="reviews" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] rounded-2xl lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col sm:gap-20 gap-10 items-center relative z-0">
             <div>
                 <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-center text-white">
                     Customer Reviews
@@ -42,7 +25,7 @@ const Review = () => {
             {/* Reviews slider */}
             <div className="flex flex-wrap md:gap-6 gap-3 w-full justify-center">
                 {reviewsList
-                    .slice(active, active + cardsPerPage)
+                    .slice(active, active + 1)
                     .map((review) => (
                         <div
                             key={review.id}
@@ -88,11 +71,11 @@ const Review = () => {
 
             {/* Dots */}
             <div className="flex flex-row gap-3 items-center">
-                {Array.from({ length: Math.ceil(reviewsList.length / cardsPerPage) }).map((_, idx) => (
+                {Array.from({ length: Math.ceil(reviewsList.length / 2) }).map((_, idx) => (
                     <div
                         key={idx}
-                        onClick={() => handleDotClick(idx * cardsPerPage)}
-                        className={`${active === idx * cardsPerPage
+                        onClick={() => handleDotClick(idx * 2)}
+                        className={`${active === idx * 2
                             ? 'sm:w-7 w-5 sm:h-7 h-5 bg-gradient-to-br from-[#01C3D9] to-[#062899]'
                             : 'bg-white sm:w-4 w-3 sm:h-4 h-3'
                             } rounded-full cursor-pointer`}
@@ -100,10 +83,10 @@ const Review = () => {
                 ))}
             </div>
 
-            {/* <img
+            <img
                 src={Gradient}
-                className="absolute bottom-0 w-full h-fit object-fill pointer-events-none -z-10"
-            /> */}
+                className='absolute -bottom-72 w-full h-full object-contain pointer-events-none -z-0'
+            />
         </div>
     );
 };

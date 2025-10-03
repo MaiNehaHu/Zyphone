@@ -1,5 +1,5 @@
 import { useState } from "react";
-import XPaddinText from "./XPaddinText"
+import XPaddinText from "./XPaddingText"
 
 const HowWeWorks = () => {
     const [opened, setOpened] = useState("02"); // Start with the first step open

@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import XPaddinText from "./XPaddinText"
+import XPaddinText from "./XPaddingText"
 import { BsCheck2Square, BsGear, BsHandThumbsUp } from "react-icons/bs";
 import { IoGiftOutline } from "react-icons/io5";
 

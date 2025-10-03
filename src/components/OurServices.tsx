@@ -1,5 +1,5 @@
 import { LuDot } from 'react-icons/lu';
-import XPaddinText from './XPaddinText'
+import XPaddinText from './XPaddingText'
 import { FiArrowUpRight } from 'react-icons/fi';
 import iPhone from "../assets/services/iphone.svg"
 import iPad from "../assets/services/ipad.svg"

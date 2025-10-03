@@ -6,7 +6,7 @@ import ActionGradientButton from "../components/ActionGradientButton"
 import { FaIndianRupeeSign } from "react-icons/fa6"
 import { IoFlash } from "react-icons/io5"
 import ServicesCounts from "../components/ServicesCounts"
-import XPaddinText from "../components/XPaddinText"
+import XPaddinText from "../components/XPaddingText"
 import OurServices from "../components/OurServices"
 import AnimatedContactUs from "../components/AnimatedContactUs"
 import WhyChooseUs from "../components/WhyChooseUs"
@@ -14,6 +14,8 @@ import MeetOurTeam from "../components/MeetOurTeam"
 import About from "../components/About"
 import Review from "../components/Review"
 import FAQ from "../components/FAQ"
+import ContactUs from "../components/ContactUs"
+import Footer from "../layout/Footer"
 
 
 const Hero = () => {
@@ -89,9 +91,13 @@ const Hero = () => {
         <Review />
 
         <FAQ />
-      </div>
-      {/* 
 
+        <ContactUs />
+
+        <Footer />
+      </div>
+
+      {/* 
       <TruestedBy />
 
       <Whyzyphon />
@@ -100,12 +106,8 @@ const Hero = () => {
 
       <OurCertifications />
 
-
-
-
       <RequestServiceForm />
-
-      <Footer /> */}
+      */}
     </>
   )
 }
