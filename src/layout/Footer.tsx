@@ -5,6 +5,7 @@ import { IoCallOutline, IoLogoInstagram } from 'react-icons/io5';
 import { SlLocationPin } from 'react-icons/sl';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiArrowUpRight } from 'react-icons/fi';
+import logo from "../../logo.svg";
 
 const Footer = () => {
     return (
@@ -40,7 +41,7 @@ const Footer = () => {
 
             <div className="w-[80%] mx-auto py-20 flex sm:flex-row flex-col gap-10 justify-between">
                 <div className='space-y-4 md:w-1/4 w-fit'>
-                    <img src={"/logo.svg"} alt="ZyPhone" />
+                    <img src={logo} alt="ZyPhone" />
                     <p className='sm:text-base text-sm text-gray-200'>Optix seamlessly connects your members with the community, resources.</p>
 
                     <h3 className='font-medium'>Follow Us: </h3>
@@ -61,8 +62,8 @@ const Footer = () => {
                 </div>
 
                 <div className='md:w-3/4 flex-1 flex flex-wrap flex-row justify-end gap-20'>
-                    {footerLinks.map((footer) => (
-                        <div className='space-y-3 flex flex-col'>
+                    {footerLinks.map((footer, index) => (
+                        <div key={index} className='space-y-3 flex flex-col'>
                             <p className="text-base font-medium">{footer.heading}</p>
 
                             {footer.links.map((link, index) => {

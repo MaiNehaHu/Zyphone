@@ -136,7 +136,7 @@ const ContactWays = ({ icon, heading, value }: { icon: JSX.Element; heading: str
             <div className="text-sm text-white space-y-1">
                 <p>{heading}</p>
                 {value.map((val) => (
-                    <p>{val}</p>
+                    <p key={val}>{val}</p>
                 ))}
             </div>
         </div>
@@ -168,7 +168,7 @@ const DropDown = ({ title, value, setValue, options }: { title: string; value: s
                 className='border border-gray-600 rounded-xl w-full p-3 text-sm bg-transparent focus:outline-0 appearance-none'
             >
                 {options.map((op) => (
-                    <option value={op} className="bg-black">{op}</option>
+                    <option key={op} value={op} className="bg-black">{op}</option>
                 ))}
             </select>
 

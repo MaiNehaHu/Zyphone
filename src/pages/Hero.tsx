@@ -10,13 +10,12 @@ import XPaddinText from "../components/XPaddingText"
 import OurServices from "../components/OurServices"
 import AnimatedContactUs from "../components/AnimatedContactUs"
 import WhyChooseUs from "../components/WhyChooseUs"
-import MeetOurTeam from "../components/MeetOurTeam"
+// import MeetOurTeam from "../components/MeetOurTeam"
+// import Review from "../components/Review"
 import About from "../components/About"
-import Review from "../components/Review"
 import FAQ from "../components/FAQ"
 import ContactUs from "../components/ContactUs"
 import Footer from "../layout/Footer"
-
 
 const Hero = () => {
   return (
@@ -76,19 +75,21 @@ const Hero = () => {
 
         <OurServices />
 
-        <HowWeWork />
       </div>
 
-      <AnimatedContactUs />
+      <div id="process">
+        <div className="p-4">
+          <HowWeWork />
+        </div>
+        <AnimatedContactUs />
+
+        <div className="p-4">
+          <WhyChooseUs />
+        </div>
+      </div>
 
       <div className="p-4">
-        <WhyChooseUs />
-
         <About />
-
-        <MeetOurTeam />
-
-        <Review />
 
         <FAQ />
 

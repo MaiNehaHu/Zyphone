@@ -30,10 +30,10 @@ const OurServices = () => {
 const RepairServices = () => {
     return (
         <div className="flex flex-row gap-4 mt-6">
-            {servicesJson.screenReplacement.map((card) => {
+            {servicesJson.screenReplacement.map((card, index) => {
                 const { title, services, image } = card;
                 return (
-                    <Gradientbg>
+                    <Gradientbg key={index}>
                         <div className="flex-1 flex flex-col gap-4 h-full p-4 sm:rounded-3xl rounded-2xl bg-gradient-to-r from-[#181414] from-40% to-[#141313]">
                             <img src={image} className='w-full h-fit rounded-2xl pointer-events-none select-none' />
 
@@ -42,8 +42,8 @@ const RepairServices = () => {
                                     {title}
                                 </p>
 
-                                {services?.map((ser) => (
-                                    <div className="flex flex-row gap-2 items-start text-white">
+                                {services?.map((ser, index) => (
+                                    <div key={index} className="flex flex-row gap-2 items-start text-white">
                                         <LuDot className="mt-1" />
                                         <p className='sm:text-sm text-xs text-gray-200 flex-1'>
                                             {ser}

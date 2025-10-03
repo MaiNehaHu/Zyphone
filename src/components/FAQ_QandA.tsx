@@ -18,6 +18,7 @@ const FAQ_QandA = () => {
         >
             {questionAndAnswer.map((qna) => (
                 <div
+                    key={qna.id}
                     onClick={() => handleClick(qna.id)}
                     className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02]" : "bg-gray-700"}` + ' p-[1px] rounded-2xl cursor-pointer'}
                 >

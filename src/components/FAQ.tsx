@@ -31,11 +31,11 @@ const FAQ = () => {
 
           <svg className="absolute right-0 -bottom-1/4 -z-10 translate-x-4 h-full" width="500" height="1222" viewBox="0 0 631 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_235_1896)">
-              <circle cx="611" cy="611" r="157" fill="#C25340" fill-opacity="0.9" />
+              <circle cx="611" cy="611" r="157" fill="#C25340" floodOpacity="0.9" />
             </g>
             <defs>
               <filter id="filter0_f_235_1896" x="0" y="0" width="1222" height="1222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="227" result="effect1_foregroundBlur_235_1896" />
               </filter>
@@ -44,11 +44,11 @@ const FAQ = () => {
 
           <svg className="absolute left-0 bottom-1/4 -z-10 -translate-x-4 h-full" width="598" height="1222" viewBox="0 0 598 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_235_2212)">
-              <circle cx="-13" cy="611" r="157" fill="#C25340" fill-opacity="0.9" />
+              <circle cx="-13" cy="611" r="157" fill="#C25340" floodOpacity="0.9" />
             </g>
             <defs>
               <filter id="filter0_f_235_2212" x="-624" y="0" width="1222" height="1222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="227" result="effect1_foregroundBlur_235_2212" />
               </filter>

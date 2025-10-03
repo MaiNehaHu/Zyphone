@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
 
                 <div className="grid grid-cols-2 gap-4 font-[Manrope]">
                     {["Same-day Service", "Genuine Parts", "12-Month Warrenty", "Transparent Pricing", "Free Doorstep Pickup & Delivery"].map((tag) => (
-                        <p className="flex flex-row items-center gap-2">
+                        <p key={tag} className="flex flex-row items-center gap-2">
                             <GoDotFill className="text-2xl" />
                             {tag}
                         </p>

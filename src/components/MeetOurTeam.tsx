@@ -9,8 +9,8 @@ const MeetOurTeam = () => {
 
 
             <div className="flex flex-row w-full gap-10">
-                {teamList.slice(0, 4).map((team) => (
-                    <Gradientbg>
+                {teamList.slice(0, 4).map((team, index) => (
+                    <Gradientbg key={index}>
                         <div className="px-6 py-12 flex flex-col items-center gap-3 bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] rounded-2xl">
                             <img src={team.image} alt="Image" className="w-52 h-52 rounded-full object-cover" />
 

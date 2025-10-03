@@ -8,7 +8,7 @@ const ServicesCounts = () => {
                 { count: 25, sign: "+", text: "Areas Covered" },
                 { count: 16, sign: "+", text: "Areas Covered" },
             ].map((obj) => (
-                <DataMapper count={obj.count} sign={obj.sign} text={obj.text} />
+                <DataMapper key={obj.count} count={obj.count} sign={obj.sign} text={obj.text} />
             ))}
         </div>
     )

@@ -104,7 +104,7 @@ const DropDown = ({ title, value, setValue, options }: { title: string; value: s
                     className='border border-gray-300 rounded-xl w-full p-3 text-sm bg-white focus:outline-0 appearance-none'
                 >
                     {options.map((op) => (
-                        <option value={op}>{op}</option>
+                        <option key={op} value={op}>{op}</option>
                     ))}
                 </select>
 
