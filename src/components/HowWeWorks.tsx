@@ -17,7 +17,7 @@ const HowWeWorks = () => {
                 Fast 4-Step Service
             </h2>
 
-            <div className="flex border-[1px] border-gray-500 rounded-2xl mt-10 z-10 w-full">
+            <div className="flex border-[1px] border-gray-800 rounded-2xl mt-10 z-10 w-fit max-w-[80%]">
                 {steps.map((st, index) => {
                     const { step, heading, description } = st;
                     const isOpened = opened === step; // Check if the current step is open
@@ -41,9 +41,7 @@ const HowWeWorks = () => {
                                 {/* Animated Description Container */}
                                 <div
                                     className={`
-                                        overflow-hidden transition-all duration-500 ease-in-out
-                                        ${isOpened ? "opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"}
-                                    `}
+                                        overflow-hidden transition-all duration-500 ease-in-out *:${isOpened ? "opacity-100 mt-4" : "max-h-0 opacity-0 mt-0 hidden"}`}
                                 >
                                     <p className="sm:text-base text-sm font-[Manrope]">
                                         {description}

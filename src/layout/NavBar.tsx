@@ -30,7 +30,7 @@ const NavBar = () => {
         setActiveSection(id);
 
         if (section) {
-            const yOffset = -100; // offset from top
+            const yOffset = -60; // offset from top
             const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: "smooth" });
             setMenuOpen(false); // close menu after click

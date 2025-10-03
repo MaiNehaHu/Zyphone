@@ -4,12 +4,23 @@ import { FaCaretDown } from 'react-icons/fa';
 const FAQ_QandA = () => {
     const [opened, setOpened] = useState(0);
 
+    function handleClick(num: number) {
+        if (opened === num) {
+            setOpened(-1)
+        } else {
+            setOpened(num);
+        }
+    }
+
     return (
         <div
             className='flex-3/4 w-full flex flex-col sm:gap-4 gap-2'
         >
             {questionAndAnswer.map((qna) => (
-                <div className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02]" : "bg-gray-700"}` + ' p-[1px] rounded-2xl'}>
+                <div
+                    onClick={() => handleClick(qna.id)}
+                    className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02]" : "bg-gray-700"}` + ' p-[1px] rounded-2xl cursor-pointer'}
+                >
                     <div
                         key={qna.id}
                         className={"md:p-8 sm:p-5 p-3 bg-[#0F0F0F] text-white sm:rounded-2xl rounded-xl w-full"}
@@ -20,7 +31,7 @@ const FAQ_QandA = () => {
                             </h3>
 
                             <button
-                                onClick={() => setOpened(qna.id)}
+                                onClick={() => handleClick(qna.id)}
                             >
                                 <FaCaretDown className={`${opened === qna.id ? "text-[#DA4A02] rotate-180 transition duration-100" : "text-gray-500"} cursor-pointer hover:text-[#E60283]`} />
                             </button>
