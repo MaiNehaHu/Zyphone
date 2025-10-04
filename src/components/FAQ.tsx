@@ -7,19 +7,19 @@ import LeftGradient from "../assets/faq/left-gradeint.svg"
 const FAQ = () => {
   return (
     <>
-      <div className="h-[0.5px] w-full bg-gradient-to-r from-[#C2534050]  via-[#E0E0E060] to-black/50 via-50% -translate-x-4" />
+      <div className="md:h-[0.5px] h-[1px] w-full bg-gradient-to-r from-[#C2534050]  via-[#E0E0E060] to-black/50 via-50% -translate-x-4" />
 
-      <div id="faq" className="font-[Urbanist] bg-black text-white sm:space-y-10 space-y-4 lg:px-16 sm:px-10 px-4 lg:py-16 sm:py-10 py-6 flex flex-col items-center relative z-10">
+      <div id="faq" className="font-[Urbanist] bg-black text-white sm:space-y-10 space-y-4 xl:px-16 sm:px-10 px-5 lg:py-16 sm:py-10 py-6 flex flex-col items-center relative z-10">
         <div>
-          <h2 className="font-['Space_Grotesk'] text-5xl font-medium">
+          <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium">
             Frequently Asked Questions
           </h2>
-          <p className="mt-2 w-full md:text-base text-sm text-gray-600">
+          <p className="mt-4 w-full md:text-base text-sm text-gray-500">
             Get answers to common questions about our Apple device repair services
           </p>
         </div>
 
-        <div className="flex flex-row items-start gap-20 w-full z-0">
+        <div className="flex lg:flex-row flex-col items-start xl:gap-20 gap-6 w-full z-0">
           <FAQ_QandA />
 
           <StillHaveQuestion />
@@ -63,20 +63,20 @@ const FAQ = () => {
 const StillHaveQuestion = () => {
   return (
     <Gradientbg>
-      <div className="w-fit sm:py-6 py-3 sm:px-10 px-6 bg-[#000000] rounded-3xl text-nowrap text-center">
-        <h2 className="font-['Space_Grotesk'] text-4xl font-medium text-white">
+      <div className="w-full sm:py-6 py-4 sm:px-10 px-6 bg-[#000000] rounded-3xl text-nowrap text-center">
+        <h2 className="font-['Space_Grotesk'] sm:text-4xl text-3xl font-medium text-white">
           Still have questions?
         </h2>
         <p className="w-full md:text-base text-sm text-[#787878]">
           Our support team is available 24/7 to help with any queries
         </p>
 
-        <div className="flex sm:flex-row flex-col mt-4 gap-2 justify-center">
-          <button className="group text-sm flex w-fit items-center justify-center gap-2 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#37D569] to-[#00B34E] text-white font-medium hover:opacity-90 transition">
+        <div className="flex flex-row sm:flex-nowrap flex-wrap mt-4 gap-2 justify-center">
+          <button className="group text-sm flex sm:w-fit w-full items-center justify-center gap-2 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#37D569] to-[#00B34E] text-white font-medium hover:opacity-90 transition">
             WhatsApp Support
             <FiArrowUpRight className="transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
-          <button className="group text-sm flex w-fit items-center justify-center gap-2 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#E60283] to-[#DA4A02] text-white font-medium hover:opacity-90 transition">
+          <button className="group text-sm flex sm:w-fit w-full items-center justify-center gap-2 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#E60283] to-[#DA4A02] text-white font-medium hover:opacity-90 transition">
             Talk to Our Suport
             <FiArrowUpRight className="transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
@@ -89,7 +89,7 @@ const StillHaveQuestion = () => {
 const Gradientbg = ({ children }: { children: JSX.Element }) => {
   return (
     <div
-      className='p-[0.8px] bg-[linear-gradient(160deg,_#757575_10%,_#00000000_60%,#757575)] rounded-3xl flex-1'
+      className='lg:w-fit w-full p-[0.8px] bg-[linear-gradient(160deg,_#757575_10%,_#00000000_60%,#757575)] rounded-3xl flex-1'
     >
       {children}
     </div>

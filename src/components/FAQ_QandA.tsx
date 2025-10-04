@@ -14,13 +14,13 @@ const FAQ_QandA = () => {
 
     return (
         <div
-            className='flex-3/4 w-full flex flex-col sm:gap-4 gap-2'
+            className='w-full flex flex-col sm:gap-4 gap-2'
         >
             {questionAndAnswer.map((qna) => (
                 <div
                     key={qna.id}
                     onClick={() => handleClick(qna.id)}
-                    className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02]" : "bg-gray-700"}` + ' p-[1px] rounded-2xl cursor-pointer'}
+                    className={`${opened === qna.id ? "bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02]" : "bg-gray-700"}` + ' p-[1px] sm:rounded-2xl rounded-xl cursor-pointer'}
                 >
                     <div
                         key={qna.id}
