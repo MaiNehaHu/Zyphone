@@ -5,7 +5,7 @@ const HowWeWorks = () => {
     const [opened, setOpened] = useState("02"); // Start with the first step open
 
     return (
-        <div className='w-full text-white flex flex-col gap-4 xl:py-10 pb-5 items-center relative lg:-translate-y-0 md:-translate-y-16 -translate-y-0'>
+        <div className='w-full text-white flex flex-col gap-4 xl:py-10 sm:pb-5 items-center relative lg:-translate-y-0 md:-translate-y-16 -translate-y-0'>
             <XPaddinText>
                 how we work
             </XPaddinText>

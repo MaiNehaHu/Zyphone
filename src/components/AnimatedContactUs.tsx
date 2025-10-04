@@ -28,9 +28,9 @@ const TextMoving = ({ bgColor, textColor, rotateAngle, translateY, animateClass 
                 backgroundColor: bgColor,
                 color: textColor,
             }}
-            className={"font-['Space_Grotesk'] text-5xl font-medium flex gap-16 py-6 overflow-x-visible select-none " + `${translateY} ${rotateAngle} ${animateClass}`}
+            className={"font-['Space_Grotesk'] md:text-5xl sm:text-4xl text-base font-medium flex sm:gap-16 gap-4 sm:py-6 py-4 overflow-x-visible select-none " + `${translateY} ${rotateAngle} ${animateClass}`}
         >
-            <div className="flex gap-6">
+            <div className="flex sm:gap-16 gap-8">
                 <p>
                     Need a Quick Fix? Contact Us
                 </p>
@@ -38,7 +38,7 @@ const TextMoving = ({ bgColor, textColor, rotateAngle, translateY, animateClass 
                     +91 - 91480 78233
                 </p>
             </div>
-            <div className="flex gap-16">
+            <div className="flex sm:gap-16 gap-8">
                 <p>
                     Need a Quick Fix? Contact Us
                 </p>
@@ -46,7 +46,7 @@ const TextMoving = ({ bgColor, textColor, rotateAngle, translateY, animateClass 
                     +91 - 91480 78233
                 </p>
             </div>
-            <div className="flex gap-16">
+            <div className="flex sm:gap-16 gap-8">
                 <p>
                     Need a Quick Fix? Contact Us
                 </p>
