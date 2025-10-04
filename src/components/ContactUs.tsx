@@ -19,17 +19,17 @@ const ContactUs = () => {
     };
 
     return (
-        <div id="contact" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] text-white from-40% t-[#3030350A] rounded-2xl lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col items-center sm:gap-20 gap-10 relative z-0 mb-16">
-            <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-white">
+        <div id="contact" className="font-[Urbanist] bg-gradient-to-b from-[#30303547] text-white from-40% t-[#3030350A] sm:rounded-2xl xl:px-20 md:px-10 px-5 xl:py-16 sm:py-12 py-6 flex flex-col items-center sm:gap-14 gap-10 relative z-0 md:mb-16">
+            <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-white">
                 Contact Us
             </h2>
 
-            <div className="flex flex-row gap-20 items-center w-full">
-                <div className="flex-1 space-y-4">
+            <div className="flex md:flex-row flex-col xl:gap-20 gap-10 lg:items-center items-start w-full">
+                <div className="lg:flex-1 flex-2/5 space-y-4">
                     <XPaddinText>
                         get in touch
                     </XPaddinText>
-                    <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-white">
+                    <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-white">
                         Need help? We’ve got you covered
                     </h2>
 
@@ -37,16 +37,17 @@ const ContactUs = () => {
                         We’re passionate about keeping your gadgets in top shape. Our team of experienced technicians.
                     </p>
 
-                    <div className="grid grid-cols-2 gap-8 mt-10">
+                    <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 sm:mt-10 mt-6">
                         <ContactWays heading='Phone' icon={<IoCallOutline className="text-xl" />} value={['+91 91480 78233', '+71 (800) 657-8963']} />
                         <ContactWays heading='Email' icon={<HiOutlineMail className="text-xl" />} value={['Nayaz377@gmail.com', 'info@gmail.com']} />
                         <ContactWays heading='Our Locations' icon={<SlLocationPin className="text-xl" />} value={['D-1001, Aakruti Amity Apartments Anatha Nagar Layout, Kammasandra Bangalore, 560100', '(Take lift from CSA block ground floor to 10th floor)']} />
                         <ContactWays heading='Opening Hours' icon={<LuClock4 className="text-xl" />} value={['Mon-Sat: 9AM-8PM', 'Sunday: 10AM-6PM']} />
                     </div>
                 </div>
-                <div className="flex-1">
-                    <div className="border border-gray-600 w-full bg-blend-saturation rounded-2xl p-10 space-y-3">
-                        <h3 className="font-['Space_Grotesk'] text-4xl font-medium text-[#EF644C] mb-10">
+
+                <div className="lg:flex-1 md:flex-3/5 w-full">
+                    <div className="border border-gray-600 w-full bg-blend-saturation rounded-2xl lg:p-10 sm:p-6 p-4 space-y-3">
+                        <h3 className="font-['Space_Grotesk'] text-4xl font-medium text-[#EF644C] sm:mb-10 mb-4">
                             Get In Touch
                         </h3>
 
@@ -72,7 +73,7 @@ const ContactUs = () => {
                             />
                         </div>
 
-                        <div className="flex sm:flex-row flex-col gap-3">
+                        <div className="flex sm:flex-row flex-col sm:gap-3 gap-1">
                             <DropDown
                                 value={deviceType}
                                 setValue={setDeviceType}
@@ -103,12 +104,12 @@ const ContactUs = () => {
                                 className="custom-checkbox"
                             />
 
-                            <p className="text-sm text-gray-400">
+                            <p className="text-sm text-gray-400 flex-1">
                                 Appointment is confirmed after we receive your service request.
                             </p>
                         </div>
 
-                        <button className="w-full bg-[#EF644C50] py-4 mt-10 rounded-2xl">
+                        <button className="w-full bg-[#EF644C50] py-4 sm:mt-10 mt-4 rounded-2xl">
                             Submit
                         </button>
                     </div>
@@ -129,11 +130,11 @@ const ContactWays = ({ icon, heading, value }: { icon: JSX.Element; heading: str
 
     return (
         <div className="flex gap-3 items-start">
-            <div className="bg-[#EF644C] text-white p-4 rounded-2xl">
+            <div className="bg-[#EF644C] text-white sm:p-4 p-3 sm:rounded-2xl rounded-xl">
                 {icon}
             </div>
 
-            <div className="text-sm text-white space-y-1">
+            <div className="sm:text-sm text-xs text-white space-y-1">
                 <p>{heading}</p>
                 {value.map((val) => (
                     <p key={val}>{val}</p>

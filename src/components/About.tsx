@@ -18,7 +18,7 @@ const About = () => {
 
                 <div className="flex md:flex-row flex-col items-center xl:gap-10 gap-6 xl:px-16">
                     <Gradientbg>
-                        <div className="bg-[#0e0e0e] text-white sm:py-6 md:py-4 py-2 sm:px-10 md:px-5 px-0 rounded-3xl space-y-6 w-full">
+                        <div className="bg-[#0e0e0e] text-white sm:py-6 py-5 sm:px-10 px-5 rounded-3xl space-y-6 w-full">
                             <h3 className="md:max-w-4xl md:text-[36px] sm:text-3xl text-xl text-start font-semibold">
                                 Our Story
                             </h3>

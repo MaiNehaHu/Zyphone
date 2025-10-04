@@ -63,7 +63,7 @@ const FAQ = () => {
 const StillHaveQuestion = () => {
   return (
     <Gradientbg>
-      <div className="w-full sm:py-6 py-4 sm:px-10 px-6 bg-[#000000] rounded-3xl text-nowrap text-center">
+      <div className="w-full sm:py-6 py-4 sm:px-10 px-4 bg-[#000000] rounded-3xl sm:text-nowrap text-center">
         <h2 className="font-['Space_Grotesk'] sm:text-4xl text-3xl font-medium text-white">
           Still have questions?
         </h2>
