@@ -14,8 +14,8 @@ const Home = () => {
             <div className="flex flex-row xl:gap-6 gap-4 items-center h-screen pt-20 xl:px-20 lg:px-0 md:px-10 p-0">
                 <img src={Phones} alt="Iphones" className="lg:block hidden h-full w-2/5 pointer-events-none select-none" />
 
-                <div className="lg:space-y-8 md:space-y-12 space-y-6 lg:w-3/5">
-                    <div className="flex sm:flex-row flex-col items-start flex-wrap gap-2 font-[Vazirmatn]">
+                <div className="lg:space-y-8 md:space-y-12 space-y-4 lg:w-3/5">
+                    <div className="flex md:flex-row flex-col items-start flex-wrap gap-2 font-[Vazirmatn]">
                         <GradientBackground>
                             <>
                                 🏆 Apple Authorized Service Provider
@@ -46,7 +46,7 @@ const Home = () => {
                         Apple parts, Apple-certified technicians, free doorstep pickup & delivery. 12-month warranty guaranteed.
                     </p>
 
-                    <div className="flex gap-x-6 gap-y-2 sm:flex-row flex-col items-start md:flex-nowrap flex-wrap">
+                    <div className="flex gap-x-6 gap-y-2 md:flex-row flex-col items-start md:flex-nowrap flex-wrap">
                         <ActionGradientButton text="Book Repair now - Same Day Service" icon={<IoFlash className="sm:text-base text-xs" />} />
                         <ActionGradientButton text="Get FREE Quote" icon={<FaIndianRupeeSign className="sm:text-base text-xs" />} />
                     </div>

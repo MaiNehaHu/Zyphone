@@ -11,12 +11,12 @@ const OurServices = () => {
     return (
         <div
             id='services'
-            className='py-14 px-20 font-[Urbanist] bg-[#120D0D] text-white w-full rounded-2xl space-y-3'
+            className='xl:py-14 py-10 xl:px-20 sm:px-10 px-5 font-[Urbanist] bg-[#120D0D] text-white w-full sm:rounded-2xl space-y-3 xl:-translate-y-0 lg:-translate-y-6 md:-translate-y-20 -translate-y-6'
         >
             <XPaddinText>
                 our services
             </XPaddinText>
-            <h2 className="font-['Space_Grotesk'] text-5xl font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">
+            <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">
                 Got a Device Issue?
             </h2>
 
@@ -29,13 +29,13 @@ const OurServices = () => {
 
 const RepairServices = () => {
     return (
-        <div className="flex flex-row gap-4 mt-6">
+        <div className="xl:flex grid sm:grid-cols-2 grid-cols-1 flex-row gap-4 mt-6">
             {servicesJson.screenReplacement.map((card, index) => {
                 const { title, services, image } = card;
                 return (
                     <Gradientbg key={index}>
                         <div className="flex-1 flex flex-col gap-4 h-full p-4 sm:rounded-3xl rounded-2xl bg-gradient-to-r from-[#181414] from-40% to-[#141313]">
-                            <img src={image} className='w-full h-fit rounded-2xl pointer-events-none select-none' />
+                            <img src={image} className='w-full xl:h-fit md:h-80 h-48 rounded-2xl pointer-events-none select-none object-cover' />
 
                             <div className="space-y-1">
                                 <p className="sm:text-2xl text-lg font-['Space_Grotesk'] font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">

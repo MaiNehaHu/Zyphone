@@ -81,15 +81,15 @@ const NavBar = () => {
     }, []);
 
     return (
-        <div className={`top-0 z-50 transition-colors sticky p-4 w-full`}>
-            <div className="font-[Manrope] p-4 flex flex-row items-center justify-between border border-[#5E5B5B] bg-black rounded-2xl w-full">
+        <div className={`top-0 z-50 transition-colors sticky sm:p-4 p-2 w-full`}>
+            <div className="font-[Manrope] sm:p-4 py-2 px-4 flex flex-row items-center justify-between border border-[#5E5B5B] bg-black rounded-2xl w-full">
                 {/* Logo */}
                 <Link to="/">
                     <img className="sm:w-full w-20 sm:h-12 h-10" src={logo} alt="Logo" />
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden xl:flex gap-1 text-base">
+                <div className="md:flex hidden gap-1 text-base">
                     {navItems.map((item, index) => (
                         <button
                             key={index}

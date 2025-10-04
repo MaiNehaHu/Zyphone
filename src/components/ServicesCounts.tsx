@@ -1,7 +1,7 @@
 
 const ServicesCounts = () => {
     return (
-        <div className="bg-[#1F1F1F] text-white py-10 sm:rounded-2xl lg:flex grid flex-row grid-cols-2 xl:gap-x-10 lg:gap-x-2 sm:gap-x-4 gap-y-6 justify-evenly w-full xl:-translate-y-24 lg:-translate-y-24 sm:-translate-y-34 -translate-y-30">
+        <div className="bg-[#1F1F1F] font-[Manrope] text-white py-10 sm:rounded-2xl lg:flex grid flex-row grid-cols-2 xl:gap-x-10 lg:gap-x-2 sm:gap-x-4 gap-y-6 justify-evenly w-full xl:-translate-y-24 lg:-translate-y-24 sm:-translate-y-34 -translate-y-30">
             {[
                 { count: 15, sign: "+", text: "Years Of Experience" },
                 { count: 20, sign: "K", text: "Years Of Experience" },
@@ -17,7 +17,7 @@ const ServicesCounts = () => {
 const DataMapper = ({ count, sign, text }: { count: number; sign: string; text: string }) => {
 
     return (
-        <div className="flex flex-row items-center gap-2 lg:mx-0 mx-auto sm:px-0 px-2">
+        <div className="flex flex-row items-center gap-2 lg:mx-0 mx-auto sm:px-0 px-4">
             <h2 className="sm:text-7xl text-4xl font-medium font-['Space_Grotesk']">
                 {count}
                 <span className="text-[#EF644C]">

@@ -5,7 +5,7 @@ import { IoGiftOutline } from "react-icons/io5";
 
 const RepairServices = () => {
   return (
-    <div className='font-[Manrope] xl:px-40 sm:px-10 px-5 text-white bg-black flex flex-col md:gap-20 gap-10 mb-20 lg:-translate-y-0 -translate-y-10'>
+    <div className='font-[Manrope] xl:px-40 sm:px-10 px-5 text-white bg-black flex flex-col md:gap-20 gap-10 sm:mb-20 lg:-translate-y-0 -translate-y-16'>
       <div className="mx-auto">
         <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-center">Apple Device Repair Services in {" "}
           <span className='bg-gradient-to-r from-[#E60283] to-[#F1D507] bg-clip-text text-transparent'>

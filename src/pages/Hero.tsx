@@ -21,7 +21,6 @@ const Hero = () => {
         <WhoWeAre />
 
         <OurServices />
-
       </div>
 
       <div id="process">
