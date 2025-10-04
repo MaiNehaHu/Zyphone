@@ -29,7 +29,7 @@ const FAQ = () => {
           <img src={RightGradient} alt="Gradient" className="absolute right-0 bottom-0 -z-10 translate-x-4 h-[70%] pointer-events-none select-none" />
           <img src={LeftGradient} alt="Gradient" className="absolute left-0 top-0 -z-10 -translate-x-4 h-[70%] pointer-events-none select-none" />
 
-          <svg className="absolute right-0 -bottom-1/4 -z-10 translate-x-4 h-full" width="500" height="1222" viewBox="0 0 631 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute right-0 -bottom-1/4 -z-10 md:translate-x-4 h-full" width="500" height="1222" viewBox="0 0 631 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_235_1896)">
               <circle cx="611" cy="611" r="157" fill="#C25340" floodOpacity="0.9" />
             </g>
