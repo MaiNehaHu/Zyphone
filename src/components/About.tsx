@@ -3,13 +3,16 @@ import ImgBg from '../assets/imgbg.svg'
 import type { JSX } from 'react';
 import MeetOurTeam from './MeetOurTeam';
 import Review from './Review';
+import { GiScrewdriver } from 'react-icons/gi';
+import { MdImportantDevices } from 'react-icons/md';
+import { GrMapLocation } from 'react-icons/gr';
+import { RiCustomerService2Line } from 'react-icons/ri';
 
 const About = () => {
     return (
-        <div id="about">
-
-            <div className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0 rounded-2xl mb-6">
-                <h2 className="font-['Space_Grotesk'] text-5xl font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">
+        <div id="about" className='sm:mt-0 mt-4'>
+            <div className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0 sm:rounded-2xl mb-6">
+                <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">
                     About zyphon
                 </h2>
 
@@ -36,13 +39,15 @@ const About = () => {
 
                     <div className="grid grid-cols-2 gap-4 justify-between md:w-[45%] w-full">
                         {[
-                            { img: "", number: "16,000+", sub: "Devices Repaired" },
-                            { img: "", number: "98%", sub: "Success Rate" },
-                            { img: "", number: "25+", sub: "Areas Covered" },
-                            { img: "", number: "24/7", sub: "Support Available" },
+                            { img: <GiScrewdriver className='text-4xl -translate-y-1.5' />, number: "16,000+", sub: "Devices Repaired" },
+                            { img: <MdImportantDevices className='text-4xl -translate-y-1.5' />, number: "98%", sub: "Success Rate" },
+                            { img: <GrMapLocation className='text-4xl -translate-y-1.5' />, number: "25+", sub: "Areas Covered" },
+                            { img: <RiCustomerService2Line className='text-4xl -translate-y-1.5' />, number: "24/7", sub: "Support Available" },
                         ].map((data) => (
                             <div key={data.number} className="flex flex-col sm:gap-3 gap-0 items-center text-white">
-                                <img src={ImgBg} alt="Img Bg" className='w-32 h-32 rounded-full' />
+                                <div className='w-32 h-32 rounded-full flex items-center justify-center' style={{ backgroundImage: `url("${ImgBg}")`, backgroundSize: "cover" }}>
+                                    {data?.img}
+                                </div>
 
                                 <p className='sm:text-4xl text-xl'>{data.number}</p>
                                 <p className='sm:text-base text-sm'>{data.sub}</p>
