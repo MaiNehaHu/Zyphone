@@ -22,20 +22,20 @@ const Review = () => {
   return (
     <div
       id="reviews"
-      className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] rounded-2xl lg:px-20 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col gap-10 items-center relative z-0"
+      className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] sm:rounded-2xl lg:px-20 md:px-10 px-5 lg:py-16 sm:py-12 py-10 flex flex-col sm:gap-10 gap-4 items-center relative z-0"
     >
       <div>
-        <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-center text-white">
+        <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-center text-white">
           Customer Reviews
         </h2>
-        <p className="mt-2 md:max-w-7xl w-full md:text-base text-center text-sm text-gray-300">
+        <p className="mt-2 md:max-w-7xl w-full md:text-base text-sm text-center text-gray-300">
           Over 3000+ satisfied Apple device customers in Bangalore trust Zyphon
           for iPhone, iPad, MacBook repairs
         </p>
       </div>
 
       {/* Carousel */}
-      <div className="relative flex justify-center items-center w-full overflow-hidden h-[420px]">
+      <div className="relative flex justify-center items-center w-full overflow-hidden sm:h-[420px] h-[380px]">
         <AnimatePresence>
           {reviewsList.map((review, idx) => {
             if (!visibleCards.includes(idx)) return null;
@@ -66,7 +66,7 @@ const Review = () => {
                 animate={{ x, scale, opacity, zIndex }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="absolute flex-shrink-0 w-[80%] max-w-md md:p-6 p-4 rounded-2xl bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] border border-gray-700"
+                className="absolute flex-shrink-0 sm:w-[80%] w-full max-w-md md:p-6 p-4 rounded-2xl bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] border border-gray-700"
               >
                 <Stars rating={review.rating} />
 

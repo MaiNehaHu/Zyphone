@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 const MeetOurTeam = () => {
     return (
-        <div className="bg-black text-white flex flex-col items-center xl:gap-20 sm:gap-14 gap-8 sm:p-10 py-8 px-5 mx-auto mb-10">
+        <div className="bg-black text-white flex flex-col items-center xl:gap-20 sm:gap-14 gap-8 sm:p-10 py-8 px-5 mx-auto md:mb-10 sm:mb-5">
             <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-center">
                 Meet Our Expert Team
             </h2>
