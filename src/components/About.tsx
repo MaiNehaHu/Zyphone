@@ -11,14 +11,14 @@ import { RiCustomerService2Line } from 'react-icons/ri';
 const About = () => {
     return (
         <div id="about" className='sm:mt-0 mt-4'>
-            <div className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] lg:px-24 md:px-10 px-4 lg:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0 sm:rounded-2xl mb-6">
+            <div className="font-[Urbanist] bg-gradient-to-b from-[#30303547] from-40% t-[#3030350A] xl:px-24 md:px-10 px-4 xl:py-16 sm:py-12 py-6 flex flex-col md:gap-20 gap-10 items-center relative z-0 sm:rounded-2xl">
                 <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium bg-gradient-to-r from-[#E60283] via-[#F1D507] to-[#DA4A02] bg-clip-text text-transparent">
                     About zyphon
                 </h2>
 
-                <div className="flex md:flex-row flex-col items-center gap-10 xl:px-16">
+                <div className="flex md:flex-row flex-col items-center xl:gap-10 gap-6 xl:px-16">
                     <Gradientbg>
-                        <div className="bg-[#0e0e0e] text-white sm:py-6 py-4 sm:px-10 px-5 rounded-3xl space-y-6 w-full">
+                        <div className="bg-[#0e0e0e] text-white sm:py-6 md:py-4 py-2 sm:px-10 md:px-5 px-0 rounded-3xl space-y-6 w-full">
                             <h3 className="md:max-w-4xl md:text-[36px] sm:text-3xl text-xl text-start font-semibold">
                                 Our Story
                             </h3>

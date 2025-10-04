@@ -2,19 +2,18 @@ import type { JSX } from "react";
 
 const MeetOurTeam = () => {
     return (
-        <div className="bg-black text-white flex flex-col items-center gap-20 p-10 mx-auto my-10">
-            <h2 className="font-['Space_Grotesk'] text-5xl font-medium text-center">
+        <div className="bg-black text-white flex flex-col items-center xl:gap-20 sm:gap-14 gap-8 sm:p-10 py-8 px-5 mx-auto mb-10">
+            <h2 className="font-['Space_Grotesk'] sm:text-5xl text-4xl font-medium text-center">
                 Meet Our Expert Team
             </h2>
 
-
-            <div className="flex flex-row w-full gap-10">
+            <div className="lg:flex grid sm:grid-cols-2 grid-cols-1 flex-row w-full xl:gap-10 sm:gap-6 gap-3">
                 {teamList.slice(0, 4).map((team, index) => (
                     <Gradientbg key={index}>
-                        <div className="px-6 py-12 flex flex-col items-center gap-3 bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] rounded-2xl">
-                            <img src={team.image} alt="Image" className="w-52 h-52 rounded-full object-cover" />
+                        <div className="sm:px-6 px-3 xl:py-12 py-6 flex flex-col items-center gap-1 bg-gradient-to-b from-[#161616] from-60% to-[#0a0a0a] rounded-2xl">
+                            <img src={team.image} alt="Image" className="xl:w-52 w-44 xl:h-52 h-44 rounded-full object-cover" />
 
-                            <p className="text-base">{team.name}</p>
+                            <p className="text-xl mt-4">{team.name}</p>
                             <p className="text-sm">{team.role}</p>
                         </div>
                     </Gradientbg>
