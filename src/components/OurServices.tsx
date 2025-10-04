@@ -69,7 +69,7 @@ const RepairServices = () => {
 const Gradientbg = ({ children }: { children: JSX.Element }) => {
     return (
         <div
-            className='p-[1px] bg-[linear-gradient(250deg,#757575,#00000000,#757575)] rounded-3xl flex-1'
+            className='p-[1px] bg-[linear-gradient(250deg,#757575,#00000000,#757575)] sm:rounded-3xl rounded-2xl flex-1'
         >
             {children}
         </div>

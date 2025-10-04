@@ -5,7 +5,7 @@ const HowWeWorks = () => {
     const [opened, setOpened] = useState("02"); // Start with the first step open
 
     return (
-        <div className='w-full text-white flex flex-col gap-4 py-10 items-center relative'>
+        <div className='w-full text-white flex flex-col gap-4 xl:py-10 pb-5 items-center relative lg:-translate-y-0 md:-translate-y-16 -translate-y-0'>
             <XPaddinText>
                 how we work
             </XPaddinText>
@@ -14,39 +14,42 @@ const HowWeWorks = () => {
                 Fast 4-Step Service
             </h2>
 
-            <div className="flex border-[1px] border-gray-800 rounded-2xl mt-10 z-10 w-fit max-w-[80%]">
+            <div
+                className="flex md:flex-row flex-col border border-gray-800 rounded-2xl mt-10 z-10 w-fit xl:max-w-[80%] max-w-[90%] overflow-hidden"
+            >
                 {steps.map((st, index) => {
                     const { step, heading, description } = st;
-                    const isOpened = opened === step; // Check if the current step is open
+                    const isOpened = opened === step;
 
                     return (
                         <div
                             key={index}
                             onClick={() => setOpened(step)}
-                            // Add transition classes for smooth width and color change
-                            className={`h-[400px] ${isOpened ? "w-sm bg-[#0c0c0c]" : "w-xs"} ${index === 0 ? "rounded-l-2xl" : index === steps.length - 1 ? "rounded-r-2xl" : ""} py-6 overflow-hidden flex flex-col transition-all duration-500 ease-in-out cursor-pointer`}
+                            className={`transition-all duration-500 ease-in-out cursor-pointer overflow-hidden flex md:flex-col md:items-start items-center justify-between lg:h-[400px] md:h-[300px] md:py-0 py-5 ${isOpened ? "md:w-sm bg-[#0c0c0c]" : "md:w-xs"} ${index === 0 ? "md:rounded-l-2xl rounded-t-2xl" : ""} ${index === steps.length - 1 ? "md:rounded-r-2xl rounded-b-2xl" : ""}`}
                         >
-                            <h2 className={`${(index % 2) === 0 ? "text-[#EF644C]" : "text-white"}` + " font-['Space_Grotesk'] font-bold text-9xl -translate-x-10"}>
+                            <h2
+                                className={`${index % 2 === 0 ? "text-[#EF644C]" : "text-white"} font-['Space_Grotesk'] font-bold lg:text-9xl md:text-6xl text-7xl lg:-translate-x-10 -translate-x-4`}
+                            >
                                 {step}
                             </h2>
 
-                            <div className={"p-8 " + `${isOpened ? "my-12" : "mt-auto"}`}>
-                                <h2 className={`${isOpened ? "text-3xl" : "text-2xl"}` + " font-['Space_Grotesk'] font-medium"}>
+                            <div className={"p-8 " + `${isOpened ? "" : "mt-auto"}`}>
+                                <h2
+                                    className={`${isOpened ? "lg:text-3xl text-2xl" : "lg:text-2xl text-xl"} font-['Space_Grotesk'] font-medium md:text-left text-right`}
+                                >
                                     {heading}
                                 </h2>
 
-                                {/* Animated Description Container */}
                                 <div
-                                    className={`
-                                        overflow-hidden transition-all duration-500 ease-in-out *:${isOpened ? "opacity-100 mt-4" : "max-h-0 opacity-0 mt-0 hidden"}`}
+                                    className={`overflow-hidden transition-all duration-500 ease-in-out md:text-left text-right ${isOpened ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"}`}
                                 >
-                                    <p className="sm:text-base text-sm font-[Manrope]">
+                                    <p className="lg:text-base sm:text-sm text-xs font-[Manrope]">
                                         {description}
                                     </p>
                                 </div>
                             </div>
                         </div>
-                    )
+                    );
                 })}
             </div>
 
